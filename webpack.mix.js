@@ -14,6 +14,7 @@ let mix = require('laravel-mix');
 mix.js('src/app.js', 'public/bundle.js')
    .sass('src/app.scss', 'public/style.css');
 
+mix.browserSync('equilab.dev');
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

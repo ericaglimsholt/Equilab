@@ -75,7 +75,7 @@ module.exports = __webpack_require__(2);
 /* 1 */
 /***/ (function(module, exports) {
 
-document.write('welcome to my app!!');
+document.write('welcome to my app!');
 console.log('app loaded!');
 
 /***/ }),
