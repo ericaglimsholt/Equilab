@@ -1,4 +1,4 @@
 {
-    "/public/bundle.js": "/public/bundle.js",
-    "/public/style.css": "/public/style.css"
+    "/public/assets/bundle.js": "/public/assets/bundle.js",
+    "/public/assets/style.css": "/public/assets/style.css"
 }

@@ -11,8 +11,8 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('src/app.js', 'public/bundle.js')
-   .sass('src/app.scss', 'public/style.css');
+mix.js('src/app.js', 'public/assets/bundle.js')
+   .sass('src/app.scss', 'public/assets/style.css');
 
 mix.browserSync('equilab.dev');
 // Full API

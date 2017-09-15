@@ -5,7 +5,8 @@
   "main": "app.js",
   "dependencies": {
     "browser-sync": "^2.18.13",
-    "browser-sync-webpack-plugin": "^1.2.0"
+    "browser-sync-webpack-plugin": "^1.2.0",
+    "cosmicjs": "^2.4.0"
   },
   "devDependencies": {
     "laravel-mix": "^1.4.3"
