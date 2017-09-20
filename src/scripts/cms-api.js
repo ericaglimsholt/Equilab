@@ -5,20 +5,25 @@ const apiConfig = {
 };
 
 const params = {
-  type_slug: 'hirings',
+  type_slug: 'pages',
   limit: 5,
   skip: 0
 };
 
 // TODO: check language before api-request
 Cosmic.getObjectType(apiConfig, params, (error, response) => {
+  if (error) throw error;
   const objects = response.objects.all;
-  // console.log(objects);
-  objects.forEach(obj => {
-    console.log(obj.title);
+  const hiringpage = objects.map(function(obj) {
+    if (obj.slug === 'landingpage') {
+      console.log(obj);
+    }
   });
+  // console.log(hiringpage);
+  // objects.forEach(obj => {
+  //   console.log(obj.title);
+  // });
   // for (let obj in object) {
   //   console.log(obj.title);
   // }
-
 });
