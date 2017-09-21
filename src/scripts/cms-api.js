@@ -4,21 +4,18 @@ const apiConfig = {
   bucket: { slug: 'equilab' }
 };
 
-const params = {
-  type_slug: 'hirings',
-  limit: 5,
-  skip: 0
-};
-
 // TODO: check language before api-request
-Cosmic.getObjectType(apiConfig, params, (error, response) => {
-  const objects = response.objects.all;
+Cosmic.getObjects(apiConfig, (error, response) => {
+  if (error) throw error;
+  const pages = response.objects.all;
   // console.log(objects);
-  objects.forEach(obj => {
-    console.log(obj.title);
+  const landingpage = pages.find(function (obj) {
+    return obj.slug === 'landingpage';
   });
-  // for (let obj in object) {
-  //   console.log(obj.title);
-  // }
+  document.querySelector('.landingpage-heading').innerText = landingpage.metadata.title_landingpage;
 
+  const hiringpage = pages.find(function (obj) {
+    return obj.slug === 'hiring';
+  });
+  console.log(hiringpage);
 });
