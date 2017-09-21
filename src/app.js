@@ -1,1 +1,1 @@
-import { cmsApi } from './scripts/cms-api';
+import { content } from './scripts/get-content';

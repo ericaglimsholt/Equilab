@@ -7,7 +7,6 @@ module.exports = {
 
   getObject: function (config, params, callback) {
     const endpoint = url + '/' + apiVersion + '/' + config.bucket.slug + '/object/' + params.slug + '/?locale=' + params.locale + '&read_key=' + config.bucket.read_key;
-    console.log(endpoint);
     fetch(endpoint)
     .then(function (response) {
       if (response.status >= 400) {
@@ -19,7 +18,7 @@ module.exports = {
       return response.json();
     })
     .then(function (response) {
-      console.log(response);
+      return callback(false, response);
     });
   }
 };
