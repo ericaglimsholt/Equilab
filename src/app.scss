@@ -1,3 +1,32 @@
+$primaryColorOrange: #eb6d4b;
+$primaryColorLightGrey: #ccc;
+
 body {
-  background: lightyellow;
+  background: white;
+}
+
+.navbar{
+  padding: 0px !important;
+  padding-left: 10px;
+  button {
+    border: none;
+    padding-top: 0.4em;
+    &:focus {
+      outline: 0em;
+    }
+  }
+  .navbar-brand {
+    padding: 0.5em;
+  }
+}
+
+.bg-faded {
+  background-color: $primaryColorOrange;
+  .navbar-nav {
+    background-color: white !important;
+    li {
+      padding-left: 1em;
+      border-bottom: 1px solid $primaryColorLightGrey;
+    }
+  }
 }
