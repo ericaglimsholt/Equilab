@@ -1,8 +1,22 @@
 // import Cosmic from 'cosmicjs';
 import Request from './request';
 
-// TODO: check language before api-request
-// set class on body and check page - then only fetch current page object?
+// TODO: set class on body and check page - then only fetch current page object?
+
+let activeLanguage = document.querySelector('.active-lang').dataset.locale;
+getPageContent('landingpage', activeLanguage);
+
+const allLanguages = document.querySelectorAll('.lang-item');
+
+allLanguages.forEach(function (language) {
+  language.addEventListener('click', function () {
+    if (language.classList.contains('active-lang')) return;
+    document.querySelector('.active-lang').classList.remove('active-lang');
+    language.classList.add('active-lang');
+    activeLanguage = language.dataset.locale;
+    getPageContent('landingpage', activeLanguage);
+  });
+});
 
 function getPageContent (page, language) {
   const apiConfig = {
@@ -21,19 +35,3 @@ function getPageContent (page, language) {
     heading.innerText = page.metadata.hero_title;
   });
 }
-// set languages short codes with dataset on menuitems - check active one
-
-let activeLanguage = document.querySelector('.active-lang').dataset.locale;
-getPageContent('landingpage', activeLanguage);
-
-const allLanguages = document.querySelectorAll('.lang-item');
-
-allLanguages.forEach(function (language) {
-  language.addEventListener('click', function () {
-    if (language.classList.contains('active-lang')) return;
-    document.querySelector('.active-lang').classList.remove('active-lang');
-    language.classList.add('active-lang');
-    activeLanguage = language.dataset.locale;
-    getPageContent('landingpage', activeLanguage);
-  });
-});
