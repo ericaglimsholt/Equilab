@@ -21,3 +21,6 @@ function getPageContent (page, language) {
   });
 }
 getPageContent('landingpage', 'en-US');
+// set languages short codes with dataset on menuitems - check active one
+
+document.querySelectorAll('.lang-item');
