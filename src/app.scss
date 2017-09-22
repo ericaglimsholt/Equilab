@@ -2,7 +2,7 @@ $primaryColorOrange: #eb6d4b;
 $primaryColorLightGrey: #ccc;
 
 body {
-  background: $primaryColorLightGrey;
+  background: white;
 }
 
 .navbar{
@@ -41,6 +41,14 @@ body {
       text-align: center;
       padding-right: 1em;
       padding-left: 1em;
+    }
+    .nav-item {
+      .dropdown-menu {
+        border-radius: 0;
+        border: 0;
+        margin: 0;
+        padding: .1rem 0;
+      }
     }
   }
 }
