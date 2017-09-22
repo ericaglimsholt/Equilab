@@ -5,6 +5,7 @@ body {
   background: white;
 }
 
+// Menu
 .navbar{
   padding: 0px !important;
   padding-left: 10px;
@@ -30,7 +31,6 @@ body {
     margin-left: 1em;
   }
 }
-
 .bg-faded {
   background-color: $primaryColorOrange;
   z-index: 2;
@@ -53,6 +53,7 @@ body {
   }
 }
 
+// Meny testing
 .overlay {
   position:absolute;
   z-index: 2;
@@ -99,5 +100,4 @@ body {
       }
     }
   }
-
 }
