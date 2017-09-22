@@ -35,3 +35,8 @@ function getPageContent (page, language) {
     heading.innerText = page.metadata.hero_title;
   });
 }
+
+const currentPageUrl = window.location.pathname.split('/').pop();
+if (currentPageUrl === '') {
+  // currentpage = landingpage
+}
