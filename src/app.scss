@@ -71,11 +71,11 @@ body {
   background: radial-gradient(ellipse at center, rgba(255,0,0,0) 0%,rgba(255,0,0,0) 50%,$primaryColorOrange 50%,$primaryColorOrange 100%);
 }
 
-// Hero SASS
+// Hero
 .hero-module {
-  background-color: red;
+  background-image: url('/img/danny_cropped.jpg');
   height: 100vh;
-  position: relative;
+  background-size: cover;
   .hero-row {
     display: flex;
     align-items: center;
@@ -85,6 +85,19 @@ body {
     margin-right: 2em;
     h1 {
       color: white;
+      margin-bottom: 1.4em;
+    }
+    .app-links {
+      a {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+        width: 60%;
+        margin-bottom: .3em;
+        }
+      }
     }
   }
+
 }
