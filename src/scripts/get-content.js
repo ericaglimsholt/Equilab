@@ -17,10 +17,23 @@ function getPageContent (page, language) {
   Request.getObject(apiConfig, params, (error, response) => {
     if (error) throw error;
     const page = response.object;
-    console.log(page);
+    const heading = document.querySelector('.landingpage-heading');
+    heading.innerText = page.metadata.hero_title;
   });
 }
-getPageContent('landingpage', 'en-US');
 // set languages short codes with dataset on menuitems - check active one
 
-document.querySelectorAll('.lang-item');
+let activeLanguage = document.querySelector('.active-lang').dataset.locale;
+getPageContent('landingpage', activeLanguage);
+
+const allLanguages = document.querySelectorAll('.lang-item');
+
+allLanguages.forEach(function (language) {
+  language.addEventListener('click', function () {
+    if (language.classList.contains('active-lang')) return;
+    document.querySelector('.active-lang').classList.remove('active-lang');
+    language.classList.add('active-lang');
+    activeLanguage = language.dataset.locale;
+    getPageContent('landingpage', activeLanguage);
+  });
+});
