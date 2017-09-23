@@ -114,6 +114,7 @@ body {
 // Image seperator
 .image-seperator {
   margin-top: 2em;
+  margin-bottom: 1em;
   img {
     width: 100%;
   }
@@ -131,6 +132,23 @@ body {
         margin-top: 1em !important;
         color: $primaryColorOrange;
       }
+    }
+  }
+}
+
+// Description
+.description-module {
+  margin: 1em;
+  .description {
+    text-align: center;
+    h2 {
+      margin-left: 1.5em;
+      margin-right: 1.5em;
+      margin-bottom: 1em;
+    }
+    img {
+    width: 60%;
+    margin-bottom: .3em;
     }
   }
 }
