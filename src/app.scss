@@ -118,3 +118,19 @@ body {
     width: 100%;
   }
 }
+
+// Quotes
+.quotes-module {
+  .quotes {
+    margin-top: 1em;
+    text-align: center;
+    .quote {
+      margin-top: 2em;
+      .name {
+        margin-bottom: 0;
+        margin-top: 1em !important;
+        color: $primaryColorOrange;
+      }
+    }
+  }
+}
