@@ -104,6 +104,9 @@ body {
 
 // Selling point
 .selling-points-module {
-  margin-top: 3em;
   margin: 1em;
+  .selling-point {
+    margin-top: 1em;
+    text-align: center;
+  }
 }
