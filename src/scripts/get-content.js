@@ -34,6 +34,7 @@ function getPageContent (page, language) {
     const page = response.object;
     const heading = document.querySelector('.landingpage-heading');
     // heading.innerText = page.metadata.hero_title;
+    // template with handlebars?
   });
 }
 
