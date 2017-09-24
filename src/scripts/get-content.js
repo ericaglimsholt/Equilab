@@ -3,6 +3,7 @@ import Request from './request';
 
 // TODO: set class on body and check page - then only fetch current page object?
 
+// TODO: check language in cookies instead or set to default en-US - remeber between pages
 let activeLanguage = document.querySelector('.active-lang').dataset.locale;
 getPageContent('landingpage', activeLanguage);
 
@@ -32,7 +33,7 @@ function getPageContent (page, language) {
     if (error) throw error;
     const page = response.object;
     const heading = document.querySelector('.landingpage-heading');
-    heading.innerText = page.metadata.hero_title;
+    // heading.innerText = page.metadata.hero_title;
   });
 }
 
