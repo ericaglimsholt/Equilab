@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="stylesheet" type="text/css" href="../assets/style.css">
 </head>
 <body>
   <!-- <div class="overlay"></div> -->
@@ -26,7 +26,7 @@
         </li>
         <!-- Input 'FAQ' title from API here -->
         <li class="nav-item">
-          <a class="nav-link" href="/faq.php">FAQ</a>
+          <a class="nav-link" href="/">FAQ</a>
         </li>
         <!-- Input 'Suggestions' title from API here -->
         <li class="nav-item">
