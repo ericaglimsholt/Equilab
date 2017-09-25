@@ -3,8 +3,6 @@ import Request from './request';
 import Handlebars from 'handlebars';
 
 let DOMloaded = false;
-// let responseData = null;
-let activeLanguage;
 
 document.addEventListener('DOMContentLoaded', function (event) {
   DOMloaded = true;
@@ -13,6 +11,7 @@ document.addEventListener('DOMContentLoaded', function (event) {
   // }
 });
 
+let activeLanguage;
 // check if language is set in local storage
 if (!localStorage.getItem('lang')) {
   activeLanguage = 'en-US';
@@ -20,6 +19,7 @@ if (!localStorage.getItem('lang')) {
   activeLanguage = localStorage.getItem('lang');
 }
 
+// fetch api data based on current page
 function getCurrentPage (activeLanguage) {
   let currentPageUrl = location.pathname.substring(1);
 
@@ -40,15 +40,27 @@ getCurrentPage(activeLanguage);
 
 function fetchLandingPage () {
   getContentFromApi('hero', activeLanguage, (dataResponse) => {
-    console.log(dataResponse);
-    const data = {
+    const heroData = {
       title: dataResponse.title
     };
-    putContentInDOM(data, 'hero');
+    putContentInDOM(heroData, 'hero');
   });
 
   // getContentFromApi('selling-points', activeLanguage);
-  // getContentFromApi('quotes', activeLanguage);
+  getContentFromApi('quotes', activeLanguage, (dataResponse) => {
+    const quotes = dataResponse.metadata.get_quotes;
+    const dataArray = [];
+    quotes.forEach(function (quote) {
+      const data = {
+        quote: quote.metadata.quote,
+        name: quote.metadata.name,
+        position: quote.metadata.position
+      };
+      dataArray.push(data);
+    });
+    const quotesData = {quotes: dataArray};
+    putContentInDOM(quotesData, 'quotes');
+  });
   // getContentFromApi('description', activeLanguage);
 }
 function fetchHiringPage () {

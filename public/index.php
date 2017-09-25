@@ -56,30 +56,13 @@
   <script id="template-quotes-module" type="text/x-handlebars-template">
 
     <div class="row quotes">
+      {{#each quotes}}
       <div class="col-md-4 quote">
-        <!-- Include quote from API here -->
         <h3>{{ quote }}</h3>
-        <!-- Include name from API here -->
         <p class="name">{{ name }}</p>
-        <!-- Include position from API here -->
         <p>{{ position }}</p>
       </div>
-      <div class="col-md-4 quote">
-        <!-- Include quote from API here -->
-        <h3>"Being able to see how my fellow riders exercise gives me not only safety, but it is also very fun to see the training without being there"</h3>
-        <!-- Include name from API here -->
-        <p class="name">Charlotte Tillman</p>
-        <!-- Include position from API here -->
-        <p>National team rider, winner of Swedish Cup</p>
-      </div>
-      <div class="col-md-4 quote">
-        <!-- Include quote from API here -->
-        <h3>"Amazing that you now can see pace, distance and training statistics in the same place!"</h3>
-        <!-- Include name from API here -->
-        <p class="name">Sivert "Sibban" Jonsson</p>
-        <!-- Include position from API here -->
-        <p>Former World Cup rider, class B-coach</p>
-      </div>
+      {{/each}}
     </div>
   </script>
   <div class="container quotes-module"></div>
