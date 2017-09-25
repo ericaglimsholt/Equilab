@@ -5,7 +5,11 @@
     <div class="row hero-row">
       <div class="app-links">
         <!-- Include title from API here -->
-        <h1>The ultimate riding app for more than 40000 users!</h1>
+        <div class="content-wrap">
+        <script id="template" type="text/x-handlebars-template">
+            <h1>{{ title }}</h1>
+        </script>
+      </div>
         <!-- Include appstore icon from API here -->
         <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
           <img src="/img/appstore-logo.png" alt="Equilab Apple Store">

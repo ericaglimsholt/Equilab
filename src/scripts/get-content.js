@@ -3,9 +3,14 @@ import Request from './request';
 import Handlebars from 'handlebars';
 
 // check language in cookies instead or set to default en-US
-let activeLanguage = document.querySelector('.active-lang').dataset.locale;
+let activeLanguage = 'en-US';
 let DOMloaded = false;
 let apiData = null;
+
+let currentPage = location.pathname.substring(1);
+
+
+getPageContentFromApi('hero', activeLanguage);
 
 document.addEventListener('DOMContentLoaded', function (event) {
   DOMloaded = true;
@@ -13,8 +18,6 @@ document.addEventListener('DOMContentLoaded', function (event) {
     putContentLandingpage(apiData);
   }
 });
-
-getPageContentFromApi('landingpage', activeLanguage);
 
 const allLanguages = document.querySelectorAll('.lang-item');
 
@@ -24,7 +27,7 @@ allLanguages.forEach(function (language) {
     document.querySelector('.active-lang').classList.remove('active-lang');
     language.classList.add('active-lang');
     activeLanguage = language.dataset.locale;
-    getPageContentFromApi('landingpage', activeLanguage);
+    getPageContentFromApi('hero', activeLanguage);
   });
 });
 
@@ -51,7 +54,7 @@ function putContentLandingpage (pageObject) {
   const source = document.getElementById('template').innerHTML;
   const template = Handlebars.compile(source);
   const data = {
-    title: pageObject.metadata.hero_title
+    title: pageObject.metadata.title
   };
   document.body.querySelector('.content-wrap').innerHTML = template(data);
 }
