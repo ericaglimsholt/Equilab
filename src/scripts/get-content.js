@@ -2,13 +2,17 @@
 import Request from './request';
 import Handlebars from 'handlebars';
 
-// check language in cookies instead or set to default en-US
-let activeLanguage = 'en-US';
+let activeLanguage;
+// check language in local storage
+if (!localStorage.getItem('lang')) {
+  activeLanguage = 'en-US';
+} else {
+  activeLanguage = localStorage.getItem('lang');
+}
 let DOMloaded = false;
 let apiData = null;
 
-let currentPage = location.pathname.substring(1);
-
+let currentPageUrl = location.pathname.substring(1);
 
 getPageContentFromApi('hero', activeLanguage);
 
@@ -23,10 +27,8 @@ const allLanguages = document.querySelectorAll('.lang-item');
 
 allLanguages.forEach(function (language) {
   language.addEventListener('click', function () {
-    if (language.classList.contains('active-lang')) return;
-    document.querySelector('.active-lang').classList.remove('active-lang');
-    language.classList.add('active-lang');
     activeLanguage = language.dataset.locale;
+    localStorage.setItem('lang', activeLanguage);
     getPageContentFromApi('hero', activeLanguage);
   });
 });
