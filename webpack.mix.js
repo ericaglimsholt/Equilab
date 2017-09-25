@@ -15,6 +15,17 @@ mix.js('src/app.js', 'public/assets/bundle.js')
    .sass('src/app.scss', 'public/assets/style.css');
 
 mix.browserSync('equilab.dev');
+
+mix.webpackConfig({
+  node: {
+    fs: 'empty'
+  },
+  resolve: {
+    alias: {
+      'handlebars': 'handlebars/dist/handlebars.js'
+    }
+  }
+});
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.
