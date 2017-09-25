@@ -26,15 +26,15 @@
         </li>
         <!-- Input 'FAQ' title from API here -->
         <li class="nav-item">
-          <a class="nav-link" href="/public/faq.php">FAQ</a>
+          <a class="nav-link" href="/faq.php">FAQ</a>
         </li>
         <!-- Input 'Suggestions' title from API here -->
         <li class="nav-item">
-          <a class="nav-link" href="/public/suggestionsbox.php">Suggestion Box</a>
+          <a class="nav-link" href="/suggestionsbox.php">Suggestion Box</a>
         </li>
         <!-- Input 'Hiring' title from API here -->
         <li class="nav-item">
-          <a class="nav-link" href="/public/hiring.php">Work for us</a>
+          <a class="nav-link" href="/hiring.php">Work for us</a>
         </li>
         <!-- Input 'Language' title from API here -->
         <li class="nav-item dropdown">

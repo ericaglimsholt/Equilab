@@ -7,6 +7,8 @@ let activeLanguage = document.querySelector('.active-lang').dataset.locale;
 let DOMloaded = false;
 let apiData = null;
 
+console.log(location.pathname);
+
 document.addEventListener('DOMContentLoaded', function (event) {
   DOMloaded = true;
   if (apiData) {
