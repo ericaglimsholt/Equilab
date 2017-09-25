@@ -1,29 +1,23 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
 
   <!-- Hero content -->
-  <div class="container hero-module">
+  <script id="template-hero-module" type="text/x-handlebars-template">
     <div class="row hero-row">
       <div class="app-links">
-        <!-- Include title from API here -->
-        <script id="template" type="text/x-handlebars-template">
-            <h1>{{ title }}</h1>
-        </script>
-        <div class="content-wrap">
-        </div>
-        <!-- Include appstore icon from API here -->
+        <h1>{{ title }}</h1>
         <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
           <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
         </a>
-        <!-- Include google play icon from API here -->
         <a href="https://play.google.com/store/apps/details?id=horse.schvung.equilab&utm_campaign=Download+App&utm_medium=Website&utm_source=Website">
           <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
         </a>
       </div>
     </div>
-  </div>
+  </script>
+  <div class="container hero-module"></div>
 
   <!-- Selling points -->
-  <div class="containter selling-points-module">
+  <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
       <div class="col-md-4 selling-point">
         <!-- Add icon from API here -->
@@ -50,7 +44,8 @@
         <p>Organize your training with coaches and co-riders by getting live updates on when you, your friends or your horse has been training.</p>
       </div>
     </div>
-  </div>
+  </script>
+  <div class="containter selling-points-module"></div>
 
   <!-- Image seperator -->
   <div class="image-seperator">
@@ -58,15 +53,16 @@
   </div>
 
   <!-- Quotes -->
-  <div class="container quotes-module">
+  <script id="template-quotes-module" type="text/x-handlebars-template">
+
     <div class="row quotes">
       <div class="col-md-4 quote">
         <!-- Include quote from API here -->
-        <h3>“This app shows black on white how much you have exercised, no excuses anymore among my students!”</h3>
+        <h3>{{ quote }}</h3>
         <!-- Include name from API here -->
-        <p class="name">Magnús Skúlason</p>
+        <p class="name">{{ name }}</p>
         <!-- Include position from API here -->
-        <p>Multiple world cup medalist</p>
+        <p>{{ position }}</p>
       </div>
       <div class="col-md-4 quote">
         <!-- Include quote from API here -->
@@ -85,7 +81,8 @@
         <p>Former World Cup rider, class B-coach</p>
       </div>
     </div>
-  </div>
+  </script>
+  <div class="container quotes-module"></div>
 
   <!-- Image seperator -->
   <div class="image-seperator">
