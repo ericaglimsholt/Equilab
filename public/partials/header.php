@@ -40,7 +40,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
           <ul class="dropdown-menu">
-            <li class="lang-item active-lang nav-link" data-locale="en-US" href="#">English</li>
+            <li class="lang-item nav-link" data-locale="en-US" href="#">English</li>
             <li class="lang-item nav-link" data-locale="sv-SE" href="#">Swedish</li>
           </ul>
         </li>
