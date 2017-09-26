@@ -48,7 +48,21 @@ function fetchLandingPage () {
     putContentInDOM(heroData, 'hero');
   });
 
-  // getContentFromApi('selling-points', activeLanguage);
+  getContentFromApi('selling-points', activeLanguage, (dataResponse) => {
+    const sellingPoints = dataResponse.metadata.selling_points;
+    const dataArray = [];
+    sellingPoints.forEach(function (point) {
+      const data = {
+        icon: point.metadata.icon.imgix_url,
+        title: point.metadata.title,
+        description: point.metadata.description
+      };
+      dataArray.push(data);
+    });
+    const sellingPointsData = {sellingPoints: dataArray};
+    putContentInDOM(sellingPointsData, 'selling-points');
+  });
+
   getContentFromApi('quotes', activeLanguage, (dataResponse) => {
     const quotes = dataResponse.metadata.get_quotes;
     const dataArray = [];

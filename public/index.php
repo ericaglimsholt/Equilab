@@ -19,30 +19,13 @@
   <!-- Selling points -->
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
+      {{#each sellingPoints}}
       <div class="col-md-4 selling-point">
-        <!-- Add icon from API here -->
-        <img src="/img/disciplines.png" alt="">
-        <!-- Add title from API here -->
-        <h2>Track</h2>
-        <!-- Add description from API here -->
-        <p>Automatically collect information about your training by turning on Equilab and keeping the phone in your pocket while riding. The app gathers information on speed, turning, intensity, gait, surface hardness and jumps.</p>
+        <img src="{{ icon }}" alt="">
+        <h2>{{ title }}</h2>
+        <p>{{ description }}</p>
       </div>
-      <div class="col-md-4 selling-point">
-        <!-- Add icon from API here -->
-        <img src="/img/disciplines.png" alt="">
-        <!-- Add title from API here -->
-        <h2>Follow</h2>
-        <!-- Add description from API here -->
-        <p>Afterwards you can analyze your training by looking at your performance, energy consumption, gait distribution, intensity jumps, stride, beat, pace, distance and much more. Look at your weekly and monthly trends and get an understanding of how to balance your training och monitor differences in your results.</p>
-      </div>
-      <div class="col-md-4 selling-point">
-        <!-- Add icon from API here -->
-        <img src="/img/disciplines.png" alt="">
-        <!-- Add title from API here -->
-        <h2>Share</h2>
-        <!-- Add description from API here -->
-        <p>Organize your training with coaches and co-riders by getting live updates on when you, your friends or your horse has been training.</p>
-      </div>
+      {{/each}}
     </div>
   </script>
   <div class="containter selling-points-module"></div>
