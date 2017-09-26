@@ -5,6 +5,76 @@ body {
   background: white;
 }
 
+@media only screen and (min-width: 760px) {
+  // Meny
+  .bg-faded .navbar-nav {
+    background-color: $primaryColorOrange !important;
+  }
+
+  .navbar .menu-icon {
+    position: relative !important;
+  }
+
+  .nav-link {
+    border-bottom: 0 !important;
+  }
+
+
+  // Hero
+  .hero-image {
+    position: absolute;
+  }
+  .hero-row {
+    position: absolute;
+    .links {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      a {
+        img {
+          width: 150px !important;
+        }
+      }
+    }
+  }
+
+  // Image seperator
+  .wireframes{
+    width: 50% !important;
+    margin: 0 auto;
+  }
+
+  .horse {
+    width: 50%;
+  }
+
+  // Description
+  .description-module {
+    margin: 0 auto !important;
+    .description {
+      width: 80%;
+      margin: 0 auto;
+      h2 {
+        width: 100%;
+      }
+      .app-links {
+        display: flex;
+
+      }
+    }
+  }
+
+  // Footer
+  .social-media {
+    width: 30%;
+    float: right;
+    img {
+      margin-right: 1.5em !important;
+    }
+  }
+
+}
+
 // Menu
 .navbar{
   padding: 0px !important;
@@ -35,7 +105,7 @@ body {
   background-color: $primaryColorOrange;
   z-index: 2;
   .navbar-nav {
-    background-color: white !important;
+    background-color: white;
     .nav-link {
       border-bottom: 1px solid $primaryColorLightGrey;
       text-align: center;
@@ -73,8 +143,12 @@ body {
 }
 
 // Hero
+
+.hero-image {
+  width: 100%;
+}
 .hero-module {
-  background-image: url('/img/danny_cropped.jpg');
+  // background-image: url('/img/danny_cropped.jpg');
   height: 100vh;
   background-size: cover;
   .hero-row {
