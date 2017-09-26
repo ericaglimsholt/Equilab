@@ -56,12 +56,12 @@
   </div>
 
   <!-- Description -->
-  <div class="container description-module">
+  <script id="template-description-module" type="text/x-handlebars-template">
     <div class="row description">
       <!-- Include title from API here -->
-      <h2>Used by more than 30 000 riders worldwide!</h2>
+      <h2>{{ title }}</h2>
       <!-- Include description from API here -->
-      <p>We all love horses and wants what’s best for them. This requires us to keep track of our horses and exercise them in a sustainable way. We hope to make this a little bit easier by helping you to automatically track your trainings with the help of your phone. This will help you keep better control over your exercises and make sure you balanced it in the best possible way for your horse & goals.</p>
+      <p>{{ description }}</p>
       <!-- Include appstore icon from API here -->
       <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
         <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
@@ -71,6 +71,7 @@
         <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
       </a>
     </div>
-  </div>
+  </script>
+  <div class="container description-module"></div>
 
 <?php require(__DIR__.'/partials/footer.php'); ?>
