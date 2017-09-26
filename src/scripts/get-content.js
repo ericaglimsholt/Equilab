@@ -77,8 +77,16 @@ function fetchLandingPage () {
     const quotesData = {quotes: dataArray};
     putContentInDOM(quotesData, 'quotes');
   });
-  // getContentFromApi('description', activeLanguage);
+  getContentFromApi('description', activeLanguage, (dataResponse) => {
+    const description = dataResponse.metadata;
+    const descriptionData = {
+      title: description.title,
+      description: description.content
+    };
+    putContentInDOM(descriptionData, 'description');
+  });
 }
+
 function fetchHiringPage () {
 }
 function fetchFaqPage () {
