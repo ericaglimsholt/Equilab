@@ -31,9 +31,10 @@
   <div class="containter selling-points-module"></div>
 
   <!-- Image seperator -->
-  <div class="image-seperator">
-    <img src="/img/horseriding.png" alt="Equilab is for every horserider">
-  </div>
+  <script id="template-image-seperator-module" type="text/x-handlebars-template">
+    <img src="{{ url }}" alt="{{ alt }}">
+  </script>
+  <div class="image-seperator-module"></div>
 
   <!-- Quotes -->
   <script id="template-quotes-module" type="text/x-handlebars-template">
@@ -51,22 +52,18 @@
   <div class="container quotes-module"></div>
 
   <!-- Image seperator -->
-  <div class="image-seperator">
+  <div class="image-seperator-module">
     <img src="/img/iphoneapp.png" alt="Equilab is for every horserider">
   </div>
 
   <!-- Description -->
   <script id="template-description-module" type="text/x-handlebars-template">
     <div class="row description">
-      <!-- Include title from API here -->
       <h2>{{ title }}</h2>
-      <!-- Include description from API here -->
       <p>{{ description }}</p>
-      <!-- Include appstore icon from API here -->
       <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
         <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
       </a>
-      <!-- Include google play icon from API here -->
       <a href="https://play.google.com/store/apps/details?id=horse.schvung.equilab&utm_campaign=Download+App&utm_medium=Website&utm_source=Website">
         <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
       </a>

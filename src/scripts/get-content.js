@@ -85,6 +85,15 @@ function fetchLandingPage () {
     };
     putContentInDOM(descriptionData, 'description');
   });
+  getContentFromApi('image-seperator', activeLanguage, (dataResponse) => {
+    const image = dataResponse.metadata;
+    console.log(image);
+    const imageData = {
+      url: image.image.imgix_url,
+      alt: image.image_alt_text
+    };
+    putContentInDOM(imageData, 'image-seperator');
+  });
 }
 
 function fetchHiringPage () {
