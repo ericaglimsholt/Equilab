@@ -19,7 +19,7 @@
     <a class="navbar-brand" href="#">Equilab</a>
 
     <div class="collapse navbar-collapse navbar-mobile " id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto ">
+      <ul class="navbar-nav mr-auto">
         <!-- Input 'Landingpage' title from API here -->
         <li class="nav-item active ">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
