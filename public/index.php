@@ -40,7 +40,7 @@
 
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/horseriding.png" alt="Equilab is for every horserider">
+    <!-- <img src="/img/horseriding.png" alt="Equilab is for every horserider"> -->
   </div>
 
   <!-- Quotes -->
@@ -60,7 +60,7 @@
 
   <!-- Image seperator -->
   <div class="image-seperator wireframes">
-    <img src="/img/iphoneapp.png" alt="Equilab is for every horserider">
+    <!-- <img src="/img/iphoneapp.png" alt="Equilab is for every horserider"> -->
   </div>
 
   <!-- Description -->

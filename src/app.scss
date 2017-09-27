@@ -1,8 +1,41 @@
 $primaryColorOrange: #eb6d4b;
 $primaryColorLightGrey: #ccc;
+$textColorDark: #1A1A1A;
+$textColorLight: #808080;
 
 body {
   background: white;
+}
+
+h1 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 50px;
+  line-height: 50pt;
+  letter-spacing: 3pt;
+}
+
+h2 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 36px;
+  line-height: 30pt;
+  letter-spacing: 3pt;
+  color: $textColorDark;
+}
+
+h3 {
+  font-family: 'Avenir', sans-serif;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 1pt;
+  color: $textColorDark;
+  font-weight: normal;
+}
+
+p {
+  font-family: 'Avenir', sans-serif;
+  font-size: 16px;
+  color: $textColorLight;
+  line-height: 26px;
 }
 
 @media only screen and (min-width: 760px) {
@@ -18,7 +51,16 @@ body {
   .nav-link {
     border-bottom: 0 !important;
   }
+  .bg-faded .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
+    color: white;
+  }
+  .navbar-light .navbar-nav .active>.nav-link {
+    border-bottom: 1px solid white;
+  }
 
+  .dropdown-menu {
+    background-color: $primaryColorOrange;
+  }
 
   // Hero
   .hero-image {
