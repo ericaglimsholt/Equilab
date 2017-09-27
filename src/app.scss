@@ -38,6 +38,10 @@ p {
   line-height: 26px;
 }
 
+.navbar {
+  font-family: 'Avenir', sans-serif;
+}
+
 @media only screen and (min-width: 760px) {
   // Meny
   .bg-faded .navbar-nav {
@@ -53,9 +57,10 @@ p {
   }
   .bg-faded .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
     color: white;
+
   }
-  .navbar-light .navbar-nav .active>.nav-link {
-    border-bottom: 1px solid white;
+  .navbar-light .navbar-nav .active {
+    // border-bottom: 1px solid white;
   }
 
   .dropdown-menu {
@@ -104,6 +109,11 @@ p {
 
       }
     }
+  }
+
+  // Selling points
+  .selling-points-module {
+    margin: 0 auto !important;
   }
 
   // Footer
@@ -224,6 +234,9 @@ p {
   .selling-point {
     margin-top: 1em;
     text-align: center;
+    img {
+      width: 100%;
+    }
   }
 }
 
