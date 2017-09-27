@@ -31,10 +31,13 @@
   <div class="containter selling-points-module"></div>
 
   <!-- Image seperator -->
-  <script id="template-image-seperator-module" type="text/x-handlebars-template">
+  <div class="image-seperator-module">
+    <img src="/img/iphoneapp.png" alt="Equilab is for every horserider">
+  </div>
+  <!-- <script id="template-image-seperator-module" type="text/x-handlebars-template">
     <img src="{{ url }}" alt="{{ alt }}">
   </script>
-  <div class="image-seperator-module"></div>
+  <div class="image-seperator-module"></div> -->
 
   <!-- Quotes -->
   <script id="template-quotes-module" type="text/x-handlebars-template">
