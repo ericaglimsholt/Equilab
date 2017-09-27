@@ -36,7 +36,7 @@
       {{/each}}
     </div>
   </script>
-  <div class="containter selling-points-module"></div>
+  <div class="container selling-points-module"></div>
 
   <!-- Image seperator -->
   <div class="image-seperator horse">
@@ -72,7 +72,6 @@
         <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
           <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
         </a>
-        <!-- Include google play icon from API here -->
         <a href="https://play.google.com/store/apps/details?id=horse.schvung.equilab&utm_campaign=Download+App&utm_medium=Website&utm_source=Website">
           <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
         </a>
