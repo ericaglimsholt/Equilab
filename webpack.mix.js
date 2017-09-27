@@ -10,10 +10,10 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-mix.setPublicPath('./');
-mix.js('src/app.js', 'public/assets/bundle.js')
-   .sass('src/app.scss', 'public/assets/style.css')
-   .version();
+mix.setPublicPath('public');
+mix.js('src/app.js', 'assets');
+mix.sass('src/app.scss', 'assets');
+mix.version();
 
 mix.browserSync('equilab.dev');
 

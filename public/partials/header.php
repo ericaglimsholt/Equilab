@@ -1,7 +1,7 @@
 <?php
 function mix($path)
 {
-  $files = json_decode(file_get_contents('../mix-manifest.json'), true);
+  $files = json_decode(file_get_contents('mix-manifest.json'), true);
   return $files[$path];
 }
 ?>
@@ -13,7 +13,7 @@ function mix($path)
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="assets/style.css">
+  <link rel="stylesheet" type="text/css" href="<?php echo mix('/assets/app.css'); ?>">
 </head>
 <body>
   <!-- <div class="overlay"></div> -->

@@ -1,8 +1,5 @@
 {
-  "name": "equilab",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "private": true,
   "dependencies": {
     "browser-sync": "^2.18.13",
     "browser-sync-webpack-plugin": "^1.2.0",
