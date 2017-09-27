@@ -270,11 +270,13 @@ p {
   }
 }
 
+
 // Footer
 .footer {
   background-color: $primaryColorOrange;
   height: 200px;
   margin-top: 4em;
+  clip-path: ellipse(70% 70% at 50% 70%);
   .social-media {
     display: flex;
     align-items: center;
