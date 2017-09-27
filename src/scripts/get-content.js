@@ -96,7 +96,7 @@ function fetchSuggestionboxPage () {
 
 function getContentFromApi (moduleObj, language, onDone) {
   const apiConfig = {
-    bucket: { slug: 'equilab', read_key: 'uL8VNHCHAtT8yniCjW8jFaC90zooc8voQ1qDNVR8krjlKTo310' }
+    bucket: { slug: 'equilab', read_key: 'xYWEdstQ6a9foLWusd6ahLolL8lnVWSQFo9Va7gFn4tfnnnxiF' }
   };
   const params = {
     slug: moduleObj,
