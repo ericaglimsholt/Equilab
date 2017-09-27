@@ -1,3 +1,10 @@
+<?php
+function mix($path)
+{
+  $files = json_decode(file_get_contents('../mix-manifest.json'), true);
+  return $files[$path];
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,7 +13,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <title>Document</title>
-  <link rel="stylesheet" type="text/css" href="../assets/style.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
 </head>
 <body>
   <!-- <div class="overlay"></div> -->

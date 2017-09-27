@@ -10,9 +10,10 @@ let mix = require('laravel-mix');
  | file for your application, as well as bundling up your JS files.
  |
  */
-
+mix.setPublicPath('./');
 mix.js('src/app.js', 'public/assets/bundle.js')
-   .sass('src/app.scss', 'public/assets/style.css');
+   .sass('src/app.scss', 'public/assets/style.css')
+   .version();
 
 mix.browserSync('equilab.dev');
 
@@ -26,6 +27,7 @@ mix.webpackConfig({
     }
   }
 });
+
 // Full API
 // mix.js(src, output);
 // mix.react(src, output); <-- Identical to mix.js(), but registers React Babel compilation.

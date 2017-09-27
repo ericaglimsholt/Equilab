@@ -6,8 +6,8 @@
     <!-- <source srcset="/img/danny_cropped.jpg" media="(min-width: 800px)"> -->
     <img class="hero-image" srcset="/img/danny-gallegos-desktop.jpg" alt="…">
   </picture>
-  <script id="template-hero-module" type="text/x-handlebars-template">
 
+  <script id="template-hero-module" type="text/x-handlebars-template">
     <div class="row hero-row">
         <div class="col-md-6 title">
           <h1>{{ title }}</h1>
@@ -20,7 +20,6 @@
             <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
           </a>
         </div>
-
     </div>
   </script>
   <div class="container hero-module"></div>
@@ -69,7 +68,7 @@
     <div class="row description">
       <h2>{{ title }}</h2>
       <p>{{ description }}</p>
-      <div class="app-links">   
+      <div class="app-links">
         <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
           <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
         </a>
