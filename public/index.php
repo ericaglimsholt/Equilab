@@ -40,7 +40,7 @@
 
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/horseriding.png" alt="Equilab is for every horserider">
+    <!-- <img src="/img/horseriding.png" alt="Equilab is for every horserider"> -->
   </div>
   <!-- <script id="template-image-seperator-module" type="text/x-handlebars-template">
     <img src="{{ url }}" alt="{{ alt }}">
@@ -64,7 +64,7 @@
 
   <!-- Image seperator -->
   <div class="image-seperator wireframes">
-    <img src="/img/iphoneapp.png" alt="Equilab is for every horserider">
+    <!-- <img src="/img/iphoneapp.png" alt="Equilab is for every horserider"> -->
   </div>
 
   <!-- Description -->

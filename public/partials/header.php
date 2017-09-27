@@ -25,8 +25,8 @@ function mix($path)
     <img class="menu-icon" src="/img/main_logo.png" alt="Equilab Icon">
     <a class="navbar-brand" href="#">Equilab</a>
 
-    <div class="collapse navbar-collapse navbar-mobile " id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
+    <div class="collapse navbar-collapse navbar-mobile" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
         <!-- Input 'Landingpage' title from API here -->
         <li class="nav-item active ">
           <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>

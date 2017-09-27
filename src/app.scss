@@ -51,7 +51,16 @@ p {
   .nav-link {
     border-bottom: 0 !important;
   }
+  .bg-faded .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
+    color: white;
+  }
+  .navbar-light .navbar-nav .active>.nav-link {
+    border-bottom: 1px solid white;
+  }
 
+  .dropdown-menu {
+    background-color: $primaryColorOrange;
+  }
 
   // Hero
   .hero-image {
