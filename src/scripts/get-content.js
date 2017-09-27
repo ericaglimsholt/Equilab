@@ -90,6 +90,20 @@ function fetchLandingPage () {
 function fetchHiringPage () {
 }
 function fetchFaqPage () {
+  getContentFromApi('faq', activeLanguage, (dataResponse) => {
+    const questions = dataResponse.metadata.questions;
+    const dataArray = [];
+    questions.forEach(function (question) {
+      const data = {
+        question: question.metadata.question,
+        answer: question.metadata.answer,
+        category: question.metadata.faq_category
+      };
+      dataArray.push(data);
+    });
+    const faqData = {faq: dataArray};
+    console.log(faqData);
+  });
 }
 function fetchSuggestionboxPage () {
 }
