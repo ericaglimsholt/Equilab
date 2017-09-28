@@ -1,13 +1,19 @@
 <!-- Footer -->
 <div class="footer">
-  <div class="social-media">
-    <a href="https://www.facebook.com/equilabapp/">
-      <img src="/img/icon_facebook.png" alt="Equilab Facebook">
-    </a>
-    <a href="https://www.instagram.com/equilabapp/">
-      <img src="/img/icon_instragram.png" alt="Equilab Instagram">
-    </a>
+  <div class="row">
+    <div class="col-md-6 logo">
+      <img class="logotype" src="/img/Equilab_logo_v1@2x.png" alt="">
+    </div>
+    <div class="col-md-6 social-media">
+      <a href="https://www.facebook.com/equilabapp/">
+        <img src="/img/icon_facebook.png" alt="Equilab Facebook">
+      </a>
+      <a href="https://www.instagram.com/equilabapp/">
+        <img src="/img/icon_instragram.png" alt="Equilab Instagram">
+      </a>
+    </div>
   </div>
+
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
