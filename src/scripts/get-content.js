@@ -102,7 +102,7 @@ function fetchFaqPage () {
       dataArray.push(data);
     });
     const faqData = {faq: dataArray};
-    console.log(faqData);
+    putContentInDOM(faqData, 'faq');
   });
 }
 function fetchSuggestionboxPage () {

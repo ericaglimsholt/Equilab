@@ -4,8 +4,7 @@
   <img src="/img/horseriding.png" alt="">
 </div>
 
-<div class="faq-module">
-
+<script id="template-faq-module" type="text/x-handlebars-template">
   <div class="row faq-heading">
     <h1>FAQ</h1>
   </div>
@@ -21,16 +20,19 @@
       </ul>
     </div>
 
-    <div class="col-md-7 questions">
-      <div class="question">
-        <p>How do I start an exercise</p>
-      </div>
-      <div class="answer">
-        <p>Before or when you are on the horse you simply press start activity and you see the clock start ticking. You are now measuring the movements of your horse and can simply go on exercising as you usually do!</p>
-      </div>
-    </div>
 
-  </div>
+      <div class="row questions">
+        {{#each faq}}
+        <div class="col-md-4 question {{ category }}">
+          <p>{{ question }}</p>
+          <p>{{ answer }}</p>
+        </div>
+        {{/each}}
+      </div>
+  </script>
 </div>
+<div class="container faq-module"></div>
+
+
 
 <?php require(__DIR__.'/partials/footer.php'); ?>
