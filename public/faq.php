@@ -12,11 +12,9 @@
   <div class="row faq">
     <div class="col-md-5 categories">
       <ul>
-        <li><h2>Basics</h2></li>
-        <li><h2>Usage</h2></li>
-        <li><h2>Functionality</h2></li>
-        <li><h2>Privacy</h2></li>
-        <li><h2>Miscellaneous</h2></li>
+        {{#each categories}}
+        <li><h2>{{ category }}</h2></li>
+        {{/each}}
       </ul>
     </div>
 

@@ -89,22 +89,33 @@ function fetchLandingPage () {
 
 function fetchHiringPage () {
 }
+
 function fetchFaqPage () {
   getContentFromApi('faq', activeLanguage, (dataResponse) => {
     const questions = dataResponse.metadata.questions;
-    const dataArray = [];
+    const categories = dataResponse.metadata.faq_category_list;
+    const questionsArray = [];
+    const categoriesArray = [];
     questions.forEach(function (question) {
       const data = {
         question: question.metadata.question,
         answer: question.metadata.answer,
         category: question.metadata.faq_category
       };
-      dataArray.push(data);
+      questionsArray.push(data);
     });
-    const faqData = {faq: dataArray};
+    categories.forEach(function (category) {
+      const data = {
+        category: ucFirst(category)
+      };
+      categoriesArray.push(data);
+    });
+
+    const faqData = { faq: questionsArray, categories: categoriesArray };
     putContentInDOM(faqData, 'faq');
   });
 }
+
 function fetchSuggestionboxPage () {
 }
 
@@ -140,3 +151,8 @@ allLanguages.forEach(function (language) {
     getCurrentPage(activeLanguage);
   });
 });
+
+// make first letter of strin uppercase
+function ucFirst (string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
+}
