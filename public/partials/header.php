@@ -22,8 +22,10 @@ function mix($path)
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <img class="menu-icon" src="/img/main_logo.png" alt="Equilab Icon">
-    <a class="navbar-brand" href="#">Equilab</a>
+
+    <a class="navbar-brand" href="#">
+      <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
+    </a>
 
     <div class="collapse navbar-collapse navbar-mobile" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto">
