@@ -1,35 +1,36 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
-
+<!-- Hero image -->
 <div class="faq-hero-module">
-  <img src="/img/horseriding.png" alt="">
+  <img src="/img/faqhorse-1920x500.jpg" alt="">
 </div>
-
+<!-- FAQ -->
 <script id="template-faq-module" type="text/x-handlebars-template">
+  <!-- Introducation -->
   <div class="row faq-heading">
-    <h1>FAQ</h1>
+    <div class="col-md-12">
+      <h2>FAQ</h2>
+    </div>
   </div>
-
   <div class="row faq">
-    <div class="col-md-5 categories">
+    <!-- Categories -->
+    <div class="col-md-4 categories">
       <ul>
         {{#each categories}}
-        <li class="category"><h2 data-category="{{ datasetCategory }}">{{ category }}</h2></li>
+        <li><h3 data-category="{{ datasetCategory }}">{{ category }}</h3></li>
         {{/each}}
       </ul>
     </div>
-
-      <div class="row questions">
-        {{#each faq}}
-        <div class="col-md-4 question {{ category }}">
-          <p>{{ question }}</p>
-          <p>{{ answer }}</p>
-        </div>
-        {{/each}}
-      </div>
-  </script>
-</div>
+    <!-- Questions and answers -->
+    <div class="col-md-6 question {{ category }}">
+      {{#each faq}}
+      <!-- Question  -->
+      <h3>{{ question }}</h3>
+      <!-- Answer -->
+      <p>{{ answer }}</p>
+      {{/each}}
+    </div>
+  </div>
+</script>
 <div class="container faq-module"></div>
-
-
 
 <?php require(__DIR__.'/partials/footer.php'); ?>

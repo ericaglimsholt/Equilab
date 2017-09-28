@@ -1,0 +1,29 @@
+.hero-image {
+  position: relative;
+}
+.container {
+  .work {
+    margin-top: 6em;
+    h2 {
+      text-align: center;
+    }
+    h3 {
+      margin-top: 2em;
+      display: block;
+    }
+  }
+  .jobs {
+    .job {
+      margin-top: 2em;
+      text-align: center;
+      img {
+        width: 10em;
+        margin-bottom: 1em;
+      }
+      p, h3 {
+        text-align: left;
+      }
+    }
+
+  }
+}

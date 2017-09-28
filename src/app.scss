@@ -132,6 +132,7 @@ p {
     height: 100%;
     img {
       width: 200px;
+      margin-left: 3em;
     }
   }
   .row .social-media {
@@ -161,6 +162,9 @@ p {
     padding: 0.5em;
     color: white;
     text-align: center;
+    img {
+      width: 180px;
+    }
   }
   .menu-icon {
     width: 40px;
@@ -308,15 +312,21 @@ p {
   height: 200px;
   margin-top: 4em;
   clip-path: ellipse(70% 70% at 50% 70%);
+  display: flex;
+  align-items: flex-end;
   .row {
+    display: flex;
+    align-items: baseline;
+    width: 100%;
     .social-media {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-end;
       height: 100%;
       img {
         width: 80px;
         margin: .5em;
+        margin-bottom: 2em;
       }
     }
   }
@@ -324,3 +334,4 @@ p {
 }
 
 @import 'styles/faq';
+@import 'styles/hiring';
