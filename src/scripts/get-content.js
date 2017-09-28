@@ -1,6 +1,7 @@
 // import Cosmic from 'cosmicjs';
 import Request from './request';
 import Handlebars from 'handlebars';
+import Faq from './faq';
 
 // let DOMloaded = false;
 //
@@ -94,6 +95,7 @@ function fetchFaqPage () {
   getContentFromApi('faq', activeLanguage, (dataResponse) => {
     const questions = dataResponse.metadata.questions;
     const categories = dataResponse.metadata.faq_category_list;
+    const datasetCategories = dataResponse.metadata.dataset_categories;
     const questionsArray = [];
     const categoriesArray = [];
     questions.forEach(function (question) {
@@ -104,11 +106,14 @@ function fetchFaqPage () {
       };
       questionsArray.push(data);
     });
+    let i = 0;
     categories.forEach(function (category) {
       const data = {
-        category: ucFirst(category)
+        category: ucFirst(category),
+        datasetCategory: datasetCategories[i]
       };
       categoriesArray.push(data);
+      i++;
     });
 
     const faqData = { faq: questionsArray, categories: categoriesArray };
@@ -139,6 +144,9 @@ function putContentInDOM (data, moduleObj) {
   const source = templateElement.innerHTML;
   const template = Handlebars.compile(source);
   moduleElement.innerHTML = template(data); // +=
+  if (moduleObj === 'faq') {
+    Faq.sortFaqByCategory();
+  }
 }
 
 // handle language switch
