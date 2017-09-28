@@ -126,7 +126,16 @@ p {
   }
 
   // Footer
-  .social-media {
+
+  .row .logo {
+    width: 200px;
+    height: 100%;
+    img {
+      width: 200px;
+    }
+  }
+  .row .social-media {
+    height: 100%;
     width: 30%;
     float: right;
     img {
@@ -299,14 +308,17 @@ p {
   height: 200px;
   margin-top: 4em;
   clip-path: ellipse(70% 70% at 50% 70%);
-  .social-media {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    img {
-      width: 80px;
-      margin: .5em;
+  .row {
+    .social-media {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      img {
+        width: 80px;
+        margin: .5em;
+      }
     }
   }
+
 }
