@@ -1,8 +1,12 @@
 <!-- Footer -->
 <div class="footer">
   <div class="social-media">
-    <img src="/img/socialmedia.png" alt="Equilab Facebook">
-    <img src="/img/socialmedia.png" alt="Equilab Instagram">
+    <a href="https://www.facebook.com/equilabapp/">
+      <img src="/img/icon_facebook.png" alt="Equilab Facebook">
+    </a>
+    <a href="https://www.instagram.com/equilabapp/">
+      <img src="/img/icon_instragram.png" alt="Equilab Instagram">
+    </a>
   </div>
 </div>
 

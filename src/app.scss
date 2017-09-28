@@ -104,9 +104,18 @@ p {
       h2 {
         width: 100%;
       }
+      p {
+        text-align: left;
+        line-height: 30px;
+      }
       .app-links {
         display: flex;
-
+        margin: 0 auto;
+        a {
+          img {
+            width: 90%;
+          }
+        }
       }
     }
   }

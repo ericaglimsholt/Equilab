@@ -14,10 +14,10 @@
         </div>
         <div class="col-md-6 links">
           <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
-            <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
+            <img src="/img/download_apple.png" alt="Equilab Apple Store">
           </a>
           <a href="https://play.google.com/store/apps/details?id=horse.schvung.equilab&utm_campaign=Download+App&utm_medium=Website&utm_source=Website">
-            <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
+            <img src="/img/download_google.png" alt="Equilab Google Play">
           </a>
         </div>
     </div>
@@ -70,10 +70,10 @@
       <p>{{ description }}</p>
       <div class="app-links">
         <a href="https://itunes.apple.com/se/app/equilab/id1133163586?utm_campaign=DownloadApp&utm_medium=Website_click&utm_source=Website">
-          <img src="/img/appstore-logo.png" alt="Equilab Apple Store">
+          <img src="/img/download_apple.png" alt="Equilab Apple Store">
         </a>
         <a href="https://play.google.com/store/apps/details?id=horse.schvung.equilab&utm_campaign=Download+App&utm_medium=Website&utm_source=Website">
-          <img src="/img/googleplay-logo.png" alt="Equilab Google Play">
+          <img src="/img/download_google.png" alt="Equilab Google Play">
         </a>
       </div>
     </div>
