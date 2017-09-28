@@ -54,6 +54,10 @@ p {
 
   .nav-link {
     border-bottom: 0 !important;
+    text-align: left !important;
+    .dropdown-menu {
+      padding-left: 1.2em !important;
+    }
   }
   .bg-faded .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
     color: white;
@@ -65,6 +69,7 @@ p {
 
   .dropdown-menu {
     background-color: $primaryColorOrange;
+    padding-left: 1.2em;
   }
 
   // Hero
@@ -192,6 +197,11 @@ p {
         border: 0;
         margin: 0;
         padding: .1rem 0;
+        padding-left: 1.2em;
+
+        li {
+          cursor: pointer;
+        }
       }
     }
   }
