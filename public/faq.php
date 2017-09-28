@@ -16,17 +16,19 @@
     <div class="col-md-4 categories">
       <ul>
         {{#each categories}}
-        <li><h3 data-category="{{ datasetCategory }}">{{ category }}</h3></li>
+        <li><h3 class="category" data-category="{{ datasetCategory }}">{{ category }}</h3></li>
         {{/each}}
       </ul>
     </div>
     <!-- Questions and answers -->
-    <div class="col-md-6 question {{ category }}">
+    <div class="col-md-6">
       {{#each faq}}
-      <!-- Question  -->
-      <h3>{{ question }}</h3>
-      <!-- Answer -->
-      <p>{{ answer }}</p>
+      <div class="question {{ category }}">
+        <!-- Question  -->
+        <h3>{{ question }}</h3>
+        <!-- Answer -->
+        <p>{{ answer }}</p>
+      </div>
       {{/each}}
     </div>
   </div>

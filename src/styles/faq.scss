@@ -24,12 +24,16 @@
     }
     .question {
       margin-left: 2em;
+      display: none;
       h3 {
         &:before {
           content:url('/img/arrow.png');
           padding-right: .5em;
         }
       }
+    }
+    .active-cat {
+      display: block;
     }
   }
 }
