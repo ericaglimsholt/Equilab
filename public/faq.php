@@ -13,7 +13,7 @@
     <div class="col-md-5 categories">
       <ul>
         {{#each categories}}
-        <li class="category"><h2 data-category="{{ category }}">{{ category }}</h2></li>
+        <li class="category"><h2 data-category="{{ datasetCategory }}">{{ category }}</h2></li>
         {{/each}}
       </ul>
     </div>
