@@ -2,16 +2,16 @@
 import Request from './request';
 import Handlebars from 'handlebars';
 
-let DOMloaded = false;
-
-console.log(location.pathname);
-
-document.addEventListener('DOMContentLoaded', function (event) {
-  DOMloaded = true;
-  // if (apiData) {
-  //   putContentInDOM(apiData);
-  // }
-});
+// let DOMloaded = false;
+//
+// console.log(location.pathname);
+//
+// document.addEventListener('DOMContentLoaded', function (event) {
+//   DOMloaded = true;
+//   // if (apiData) {
+//   //   putContentInDOM(apiData);
+//   // }
+// });
 
 let activeLanguage;
 // check if language is set in local storage
