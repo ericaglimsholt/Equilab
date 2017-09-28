@@ -17,11 +17,9 @@ module.exports = {
 
     function filterFaq (event) {
       const clickedCat = event.target.dataset.category;
-      console.log(clickedCat);
       questions.forEach(question => {
         question.classList.remove('active-cat');
         if (question.classList.contains(clickedCat.toLowerCase())) {
-          console.log('hej');
           question.classList.add('active-cat');
         }
       });
