@@ -13,11 +13,10 @@
     <div class="col-md-5 categories">
       <ul>
         {{#each categories}}
-        <li><h2>{{ category }}</h2></li>
+        <li class="category"><h2 data-category="{{ category }}">{{ category }}</h2></li>
         {{/each}}
       </ul>
     </div>
-
 
       <div class="row questions">
         {{#each faq}}

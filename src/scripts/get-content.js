@@ -1,6 +1,7 @@
 // import Cosmic from 'cosmicjs';
 import Request from './request';
 import Handlebars from 'handlebars';
+import Faq from './faq';
 
 let DOMloaded = false;
 
@@ -139,6 +140,9 @@ function putContentInDOM (data, moduleObj) {
   const source = templateElement.innerHTML;
   const template = Handlebars.compile(source);
   moduleElement.innerHTML = template(data); // +=
+  if (moduleObj === 'faq') {
+    Faq.sortFaqByCategory();
+  }
 }
 
 // handle language switch

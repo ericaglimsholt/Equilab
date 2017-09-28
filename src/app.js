@@ -1,1 +1,1 @@
-import { content } from './scripts/get-content';
+import { Content } from './scripts/get-content';
