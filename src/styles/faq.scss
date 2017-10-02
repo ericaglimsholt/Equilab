@@ -20,6 +20,17 @@
       border-right: 2px solid $primaryColorOrange;
       ul {
         list-style: none;
+        h3 {
+          display: inline-block;
+          border-bottom: 2px solid #fff;
+          &:hover {
+            cursor: pointer;
+            border-bottom: 2px solid $primaryColorOrange;
+          }
+        }
+      }
+      .active-cat-heading {
+        border-bottom: 2px solid $primaryColorOrange;
       }
     }
     .question {
@@ -29,7 +40,27 @@
         &:before {
           content:url('/img/arrow.png');
           padding-right: .5em;
+          transition: all .5s ease;
+          display: inline-block;
         }
+        &:hover {
+          cursor: pointer;
+        }
+      }
+      .active-question {
+        &:before {
+          transform: rotate(45deg);
+          transform-origin: center;
+        }
+      }
+      p {
+        max-height: 0;
+        overflow: hidden;
+        transition: all .7s ease;
+      }
+      .active-answer {
+        max-height: 500px;
+        transition: all .7s ease;
       }
     }
     .active-cat {
