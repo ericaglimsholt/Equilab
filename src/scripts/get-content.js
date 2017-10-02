@@ -89,6 +89,40 @@ function fetchLandingPage () {
 }
 
 function fetchHiringPage () {
+  getContentFromApi('hirings', activeLanguage, (dataResponse) => {
+    const hirings = dataResponse.metadata;
+    const textBlocksArray = [];
+    const adsArray = [];
+    hirings.textblock.forEach(function (block) {
+      const data = {
+        title: block.hiring_block_title,
+        textContent: block.hiring_block_text
+      };
+      textBlocksArray.push(data);
+    });
+    hirings.hiring_ads.forEach(function (ad) {
+      const moreInfoArray = [];
+      ad.metadata.ad_text_block.forEach(function (block) {
+        const moreInfo = {
+          heading: block.ad_text_block_heading,
+          infoText: block.ad_text
+        };
+        moreInfoArray.push(moreInfo);
+      });
+      const data = {
+        adTitle: ad.title,
+        adPreamble: ad.metadata.the_task_at_hand,
+        moreInfo: moreInfoArray
+      };
+      adsArray.push(data);
+    });
+    const hiringsData = {
+      heading: hirings.hirings_heading,
+      textBlocks: textBlocksArray,
+      ads: adsArray
+    };
+    putContentInDOM(hiringsData, 'hirings');
+  });
 }
 
 function fetchFaqPage () {
@@ -160,7 +194,7 @@ allLanguages.forEach(function (language) {
   });
 });
 
-// make first letter of strin uppercase
+// make first letter of string uppercase
 function ucFirst (string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
 }

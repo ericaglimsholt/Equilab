@@ -6,27 +6,32 @@
 </div>
 
 <!-- Work -->
-<div class="container">
+<script id="template-hirings-module" type="text/x-handlebars-template">
   <!-- Introduction -->
   <div class="row work">
     <div class="col-md-12">
-      <h2>Work for us</h2>
-      <h3>We are growing!</h3>
-      <p>Text</p>
-      <h3>This is us</h3>
-      <p>Text</p>
+      <h2>{{ heading }}</h2>
+      {{#each textBlocks}}
+      <h3>{{ title }}</h3>
+      <p>{{ textContent }}</p>
+      {{/each}}
     </div>
   </div>
   <!-- Wanted jobs -->
   <div class="row jobs">
+    {{#each ads}}
     <div class="col-md-12 job">
       <img src="/img/v1question_white@2x.png" alt="Searching job?">
-      <h2>Work title</h2>
-      <p>Text</p>
-      <h3>Does some of these things describe you?</h3>
-      <p>Text</p>
+      <h2>{{ adTitle }}</h2>
+      <p>{{ adPreamble }}</p>
+      {{#each moreInfo }}
+      <h3>{{ heading }}</h3>
+      <p>{{ infoText }}</p>
+      {{/each}}
     </div>
+    {{/each}}
   </div>
-</div>
+</script>
+<div class="container hirings-module"></div>
 
 <?php require(__DIR__.'/partials/footer.php'); ?>
