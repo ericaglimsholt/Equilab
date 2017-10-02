@@ -1,12 +1,12 @@
 .suggestion-box {
   margin-top: 6em;
   .introducation {
+    margin-bottom: 3em;
     h2 {
       text-align: center;
     }
   }
   .suggestions {
-    margin-top: 3em;
     h3 {
       font-weight: bold;
       &:before {
@@ -21,5 +21,38 @@
     text-align: center;
     color: $primaryColorOrange;
     font-weight: bold;
+    cursor: pointer;
+    &:before {
+      content:url('/img/heart@2x.png');
+      padding-right: .5em;
+      transform: scale(.1);
+    }
+    &:hover {
+      color: white;
+      background-color: $primaryColorOrange;
+    }
+  }
+  .forms {
+    .text {
+      margin-top: 2em;
+      text-align: center;
+    }
+    .send-box {
+      text-align: center;
+      width: 12em;
+      border: 2px solid $primaryColorOrange;
+      cursor: pointer;
+      margin: 0 auto;
+      margin-top: 1em;
+      .send {
+        font-weight: bold;
+        color: $primaryColorOrange;
+        margin-bottom: 0;
+        &:hover {
+          color: white;
+          background-color: $primaryColorOrange;
+        }
+      }
+    }
   }
 }
