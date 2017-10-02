@@ -6,7 +6,7 @@
 </div>
 
 <!-- Suggestion box -->
-<div class="container">
+<div class="container suggestion-box">
   <div class="row introducation">
     <!-- Introduction text -->
     <div class="col-md-12">

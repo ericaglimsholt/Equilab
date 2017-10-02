@@ -1,0 +1,25 @@
+.suggestion-box {
+  margin-top: 6em;
+  .introducation {
+    h2 {
+      text-align: center;
+    }
+  }
+  .suggestions {
+    margin-top: 3em;
+    h3 {
+      font-weight: bold;
+      &:before {
+        content:url('/img/arrow.png');
+        padding-right: .5em;
+      }
+    }
+  }
+  .counter {
+    border: 2px solid $primaryColorOrange;
+    width: 5em;
+    text-align: center;
+    color: $primaryColorOrange;
+    font-weight: bold;
+  }
+}
