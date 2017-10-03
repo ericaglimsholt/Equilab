@@ -27,7 +27,7 @@ function mix($path)
       <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
     </a>
 
-    <div class="collapse navbar-collapse navbar-mobile" id="navbarSupportedContent">
+    <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
         <!-- Input 'Landingpage' title from API here -->
         <li class="nav-item active ">
@@ -49,10 +49,12 @@ function mix($path)
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
           <ul class="dropdown-menu">
-            <li class="lang-item nav-link" data-locale="en-US" href="#">English</li>
-            <li class="lang-item nav-link" data-locale="sv-SE" href="#">Swedish</li>
+            {{#each languages}}
+            <li class="lang-item nav-link" data-locale="{{ locale }}" href="#">{{ language }}</li>
+            {{/each}}
           </ul>
         </li>
       </ul>
-    </div>
+    </script>
+      <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
   </nav>
