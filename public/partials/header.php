@@ -29,31 +29,24 @@ function mix($path)
 
     <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
-        <!-- Input 'Landingpage' title from API here -->
-        <li class="nav-item active ">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- Input 'FAQ' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/faq.php">FAQ</a>
-        </li>
-        <!-- Input 'Suggestions' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/suggestionsbox.php">Suggestion Box</a>
-        </li>
-        <!-- Input 'Hiring' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/hiring.php">Work for us</a>
-        </li>
-        <!-- Input 'Language' title from API here -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
-          <ul class="dropdown-menu">
-            {{#each languages}}
-            <li class="lang-item nav-link" data-locale="{{ locale }}" href="#">{{ language }}</li>
-            {{/each}}
-          </ul>
-        </li>
+
+        {{#each menuItems}}
+          {{#if @last}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ menuItem }}</a>
+            <ul class="dropdown-menu">
+              {{#each languages}}
+              <li class="lang-item nav-link" data-locale="{{ locale }}" href="#">{{ language }}</li>
+              {{/each}}
+            </ul>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="/">{{ menuItem }}</a>
+          </li>
+          {{/if}}
+        {{/each}}
+
       </ul>
     </script>
       <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>

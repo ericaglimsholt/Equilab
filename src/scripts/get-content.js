@@ -46,21 +46,22 @@ function fetchMenu () {
   getContentFromApi('menu', activeLanguage, (dataResponse) => {
     const menu = dataResponse.metadata;
     const menuItemsArray = [];
-    const languagesArray = [];
     menu.menu_items.forEach(function (item) {
+      const languagesArray = [];
+      menu.languages.forEach(function (language) {
+        const languagesData = {
+          language: language.language,
+          locale: language.locale
+        };
+        languagesArray.push(languagesData);
+      });
       const data = {
-        menuItem: item.menu_item
+        menuItem: item.menu_item,
+        languages: languagesArray
       };
       menuItemsArray.push(data);
     });
-    menu.languages.forEach(function (language) {
-      const data = {
-        language: language.language,
-        locale: language.locale
-      };
-      languagesArray.push(data);
-    });
-    const menuData = { menuItems: menuItemsArray, languages: languagesArray };
+    const menuData = { menuItems: menuItemsArray };
     putContentInDOM(menuData, 'menu');
     listenForLanguageChange();
   });
