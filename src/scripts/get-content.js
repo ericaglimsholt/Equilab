@@ -46,6 +46,9 @@ function fetchMenu () {
   getContentFromApi('menu', activeLanguage, (dataResponse) => {
     const menu = dataResponse.metadata;
     const menuItemsArray = [];
+    // temp array, add to cms api
+    const pageLinks = ['/', '/faq.php', '/suggestionsbox.php', '/hiring.php', '#'];
+    let i = 0;
     menu.menu_items.forEach(function (item) {
       const languagesArray = [];
       menu.languages.forEach(function (language) {
@@ -57,9 +60,12 @@ function fetchMenu () {
       });
       const data = {
         menuItem: item.menu_item,
-        languages: languagesArray
+        languages: languagesArray,
+        pageLink: pageLinks[i]
       };
+      console.log(data);
       menuItemsArray.push(data);
+      i++;
     });
     const menuData = { menuItems: menuItemsArray };
     putContentInDOM(menuData, 'menu');

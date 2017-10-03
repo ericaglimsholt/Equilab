@@ -42,7 +42,7 @@ function mix($path)
           </li>
           {{else}}
           <li class="nav-item">
-            <a class="nav-link" href="/">{{ menuItem }}</a>
+            <a class="nav-link" href="{{ pageLink }}">{{ menuItem }}</a>
           </li>
           {{/if}}
         {{/each}}
