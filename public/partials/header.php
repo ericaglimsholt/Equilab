@@ -23,7 +23,7 @@ function mix($path)
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
       <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
     </a>
 
