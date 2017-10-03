@@ -27,32 +27,27 @@ function mix($path)
       <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
     </a>
 
-    <div class="collapse navbar-collapse navbar-mobile" id="navbarSupportedContent">
+    <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
-        <!-- Input 'Landingpage' title from API here -->
-        <li class="nav-item active ">
-          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <!-- Input 'FAQ' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/faq.php">FAQ</a>
-        </li>
-        <!-- Input 'Suggestions' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/suggestionsbox.php">Suggestion Box</a>
-        </li>
-        <!-- Input 'Hiring' title from API here -->
-        <li class="nav-item">
-          <a class="nav-link" href="/hiring.php">Work for us</a>
-        </li>
-        <!-- Input 'Language' title from API here -->
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Language</a>
-          <ul class="dropdown-menu">
-            <li class="lang-item nav-link" data-locale="en-US" href="#">English</li>
-            <li class="lang-item nav-link" data-locale="sv-SE" href="#">Swedish</li>
-          </ul>
-        </li>
+
+        {{#each menuItems}}
+          {{#if @last}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ menuItem }}</a>
+            <ul class="dropdown-menu">
+              {{#each languages}}
+              <li class="lang-item nav-link" data-locale="{{ locale }}" href="#">{{ language }}</li>
+              {{/each}}
+            </ul>
+          </li>
+          {{else}}
+          <li class="nav-item">
+            <a class="nav-link" href="{{ pageLink }}">{{ menuItem }}</a>
+          </li>
+          {{/if}}
+        {{/each}}
+
       </ul>
-    </div>
+    </script>
+      <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
   </nav>

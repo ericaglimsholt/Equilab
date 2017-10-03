@@ -23,23 +23,55 @@ if (!localStorage.getItem('lang')) {
 }
 
 // fetch api data based on current page
-function getCurrentPage (activeLanguage) {
+function getCurrentPage () {
+  fetchMenu();
   let currentPageUrl = location.pathname.substring(1);
 
   if (currentPageUrl === '') {
-    fetchLandingPage(activeLanguage);
+    fetchLandingPage();
   }
   if (currentPageUrl === 'hiring.php') {
-    fetchHiringPage(activeLanguage);
+    fetchHiringPage();
   }
   if (currentPageUrl === 'faq.php') {
-    fetchFaqPage(activeLanguage);
+    fetchFaqPage();
   }
   if (currentPageUrl === 'suggestionsbox.php') {
-    fetchSuggestionboxPage(activeLanguage);
+    fetchSuggestionboxPage();
   }
 }
-getCurrentPage(activeLanguage);
+getCurrentPage();
+
+function fetchMenu () {
+  getContentFromApi('menu', activeLanguage, (dataResponse) => {
+    const menu = dataResponse.metadata;
+    const menuItemsArray = [];
+    // temp array, add to cms api
+    const pageLinks = ['/', '/faq.php', '/suggestionsbox.php', '/hiring.php', '#'];
+    let i = 0;
+    menu.menu_items.forEach(function (item) {
+      const languagesArray = [];
+      menu.languages.forEach(function (language) {
+        const languagesData = {
+          language: language.language,
+          locale: language.locale
+        };
+        languagesArray.push(languagesData);
+      });
+      const data = {
+        menuItem: item.menu_item,
+        languages: languagesArray,
+        pageLink: pageLinks[i]
+      };
+      console.log(data);
+      menuItemsArray.push(data);
+      i++;
+    });
+    const menuData = { menuItems: menuItemsArray };
+    putContentInDOM(menuData, 'menu');
+    listenForLanguageChange();
+  });
+}
 
 function fetchLandingPage () {
   getContentFromApi('hero', activeLanguage, (dataResponse) => {
@@ -184,16 +216,17 @@ function putContentInDOM (data, moduleObj) {
 }
 
 // handle language switch
-const allLanguages = document.querySelectorAll('.lang-item');
+function listenForLanguageChange () {
+  const allLanguages = document.querySelectorAll('.lang-item');
 
-allLanguages.forEach(function (language) {
-  language.addEventListener('click', function () {
-    activeLanguage = language.dataset.locale;
-    localStorage.setItem('lang', activeLanguage);
-    getCurrentPage(activeLanguage);
+  allLanguages.forEach(function (language) {
+    language.addEventListener('click', function () {
+      activeLanguage = language.dataset.locale;
+      localStorage.setItem('lang', activeLanguage);
+      getCurrentPage(activeLanguage);
+    });
   });
-});
-
+}
 // make first letter of string uppercase
 function ucFirst (string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
