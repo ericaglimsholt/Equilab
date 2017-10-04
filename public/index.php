@@ -34,9 +34,11 @@
 
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <!-- <img src="/img/horseriding.png" alt="Equilab is for every horserider"> -->
+    <img src="/img/meadow_riding2.jpg" alt="Equilab is for every horserider">
   </div>
 
+  <!-- Curve -->
+  <div class="curve"></div>
   <!-- Quotes -->
   <script id="template-quotes-module" type="text/x-handlebars-template">
 
