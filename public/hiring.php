@@ -5,6 +5,8 @@
   <img src="/img/minecraft-1920x500.jpg" alt="">
 </div>
 
+<div class="curve"></div>
+
 <!-- Work -->
 <script id="template-hirings-module" type="text/x-handlebars-template">
   <!-- Introduction -->

@@ -15,6 +15,9 @@
   </div>
 </div>
 
+<!-- Curve -->
+<div class="curve"></div>
+
   <!-- Selling points -->
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">

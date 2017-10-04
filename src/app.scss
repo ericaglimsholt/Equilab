@@ -72,6 +72,13 @@ p {
     padding-left: 1.2em;
   }
 
+  .curve {
+    height: 100px;
+    background-color: white;
+    clip-path: ellipse(70% 70% at 50% 70%);
+    margin-top: -100px;
+  }
+
   // Hero
 
   .hero {
