@@ -4,9 +4,8 @@
 <div class="row hero-image">
   <img src="/img/minecraft-1920x500.jpg" alt="">
 </div>
-
+<!-- Curve -->
 <div class="curve"></div>
-
 <!-- Work -->
 <script id="template-hirings-module" type="text/x-handlebars-template">
   <!-- Introduction -->

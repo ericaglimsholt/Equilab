@@ -1,14 +1,14 @@
 'use strict';
 
 module.exports = {
-
+  // Sorting
   sortFaqByCategory: function () {
     const questions = document.querySelectorAll('.question');
     const categories = document.querySelectorAll('.category');
 
     if (questions.length > 0) {
       questions.forEach(question => {
-        // set default choosen category
+        // Set default choosen category
         categories.forEach(cat => {
           if (cat.dataset.category === 'basics') {
             cat.classList.add('active-cat-heading');
@@ -22,6 +22,7 @@ module.exports = {
     }
     categories.forEach(catItem => catItem.addEventListener('click', filterFaq));
 
+    // Filter
     function filterFaq (event) {
       categories.forEach(catItem => catItem.classList.remove('active-cat-heading'));
       event.target.classList.add('active-cat-heading');

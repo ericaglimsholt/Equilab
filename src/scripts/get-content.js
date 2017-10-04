@@ -42,6 +42,7 @@ function getCurrentPage () {
 }
 getCurrentPage();
 
+// Fetch menu
 function fetchMenu () {
   getContentFromApi('menu', activeLanguage, (dataResponse) => {
     const menu = dataResponse.metadata;
@@ -73,6 +74,7 @@ function fetchMenu () {
   });
 }
 
+// Fetch landingpage
 function fetchLandingPage () {
   getContentFromApi('hero', activeLanguage, (dataResponse) => {
     const heroData = {
@@ -81,6 +83,7 @@ function fetchLandingPage () {
     putContentInDOM(heroData, 'hero');
   });
 
+// Get content from selling points in API
   getContentFromApi('selling-points', activeLanguage, (dataResponse) => {
     const sellingPoints = dataResponse.metadata.selling_points;
     const dataArray = [];
@@ -96,6 +99,7 @@ function fetchLandingPage () {
     putContentInDOM(sellingPointsData, 'selling-points');
   });
 
+// Get content from qoutes in API
   getContentFromApi('quotes', activeLanguage, (dataResponse) => {
     const quotes = dataResponse.metadata.get_quotes;
     const dataArray = [];
@@ -120,6 +124,7 @@ function fetchLandingPage () {
   });
 }
 
+// Get content from hiring in API
 function fetchHiringPage () {
   getContentFromApi('hirings', activeLanguage, (dataResponse) => {
     const hirings = dataResponse.metadata;
@@ -157,6 +162,7 @@ function fetchHiringPage () {
   });
 }
 
+// Get content from faq in API
 function fetchFaqPage () {
   getContentFromApi('faq', activeLanguage, (dataResponse) => {
     const questions = dataResponse.metadata.questions;
