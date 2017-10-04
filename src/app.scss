@@ -73,6 +73,30 @@ p {
   }
 
   // Hero
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    min-height: 800px;
+    .danny {
+      width: 100%;
+      position: absolute;
+    }
+    .social-media-holder{
+      margin-top: 3em;
+      margin-right: 5em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      .social {
+        width: 15em;
+        margin-top: 2em;
+      }
+    }
+  }
+
   .hero-image {
     position: absolute;
   }
@@ -233,7 +257,7 @@ p {
 }
 .hero-module {
   // background-image: url('/img/danny_cropped.jpg');
-  height: 100vh;
+  // height: 100vh;
   background-size: cover;
   .hero-row {
     display: flex;
