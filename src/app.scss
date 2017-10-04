@@ -72,7 +72,38 @@ p {
     padding-left: 1.2em;
   }
 
+  .curve {
+    height: 100px;
+    background-color: white;
+    clip-path: ellipse(70% 70% at 50% 70%);
+    margin-top: -100px;
+  }
+
   // Hero
+
+  .hero {
+    position: relative;
+    overflow: hidden;
+    max-height: 800px;
+    min-height: 800px;
+    .danny {
+      width: 100%;
+      position: absolute;
+    }
+    .social-media-holder{
+      margin-top: 3em;
+      margin-right: 5em;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      position: relative;
+      .social {
+        width: 15em;
+        margin-top: 2em;
+      }
+    }
+  }
+
   .hero-image {
     position: absolute;
   }
@@ -97,7 +128,10 @@ p {
   }
 
   .horse {
-    width: 50%;
+    width: 100%;
+     img {
+       width: 100%;
+     }
   }
 
   // Description
@@ -233,7 +267,7 @@ p {
 }
 .hero-module {
   // background-image: url('/img/danny_cropped.jpg');
-  height: 100vh;
+  // height: 100vh;
   background-size: cover;
   .hero-row {
     display: flex;
@@ -324,6 +358,7 @@ p {
   clip-path: ellipse(70% 70% at 50% 70%);
   display: flex;
   align-items: flex-end;
+  position: relative;
   .row {
     display: flex;
     align-items: baseline;

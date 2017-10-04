@@ -16,20 +16,20 @@ function mix($path)
   <link rel="stylesheet" type="text/css" href="<?php echo mix('/assets/app.css'); ?>">
 </head>
 <body>
-  <!-- <div class="overlay"></div> -->
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">
 
+<!-- Navbar -->
+  <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">
+    <!-- Button when on mobile device -->
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-
+    <!-- Equilab logotype -->
     <a class="navbar-brand" href="/">
       <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
     </a>
-
     <script id="template-menu-module" type="text/x-handlebars-template">
+      <!-- Pages -->
       <ul class="navbar-nav ml-auto">
-
         {{#each menuItems}}
           {{#if @last}}
           <li class="nav-item dropdown">
@@ -46,8 +46,7 @@ function mix($path)
           </li>
           {{/if}}
         {{/each}}
-
       </ul>
     </script>
-      <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
-  </nav>
+  <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
+</nav>

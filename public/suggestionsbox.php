@@ -4,7 +4,8 @@
 <div class="hero-image">
   <img src="/img/suggestionhorse-1920x500.jpg" alt="">
 </div>
-
+<!-- Curve -->
+<div class="curve"></div>
 <!-- Suggestion box -->
 <div class="container suggestion-box">
   <div class="row introducation">
