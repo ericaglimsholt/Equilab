@@ -7,28 +7,41 @@
     }
   }
   .suggestions {
+    .arrow-video {
+      width: 20px;
+      position: absolute;
+    }
     h3 {
       font-weight: bold;
-      &:before {
-        content:url('/img/arrow.png');
-        padding-right: .5em;
-      }
+      margin-left: 2em;
+      // &:before {
+      //   content:url('/img/arrow.png');
+      //   padding-right: .5em;
+      // }
+    }
+  }
+
+  .counter-div {
+    width: 6em;
+    &:hover {
+      background-color: $primaryColorOrange;
+      color: white;
     }
   }
   .counter {
     border: 2px solid $primaryColorOrange;
-    width: 5em;
+    width: 6em;
     text-align: center;
     color: $primaryColorOrange;
     font-weight: bold;
     cursor: pointer;
-    &:before {
-      content:url('/img/heart@2x.png');
-      padding-right: .5em;
+    &:visited {
+     color: white;
+     background-color: $primaryColorOrange;
     }
-    &:hover {
-      color: white;
-      background-color: $primaryColorOrange;
+    &:before {
+      content:url('/img/icon-heart4.png');
+      padding-right: .5em;
     }
   }
   .forms {
