@@ -50,7 +50,8 @@
   <div class="container quotes-module"></div>
   <!-- Image seperator -->
   <div class="image-seperator wireframes">
-    <!-- <img src="/img/iphoneapp.png" alt="Equilab is for every horserider"> -->
+    <img src="/img/mockup-a.png" alt="Equilab is for every horserider">
+    <img src="/img/mockup-b.png" alt="Equilab is for every horserider">
   </div>
   <!-- Description -->
   <script id="template-description-module" type="text/x-handlebars-template">

@@ -123,8 +123,11 @@ p {
 
   // Image seperator
   .wireframes{
-    width: 50% !important;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    img {
+      margin: 4em;
+    }
   }
 
   .horse {
