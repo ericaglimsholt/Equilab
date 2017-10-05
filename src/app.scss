@@ -79,6 +79,11 @@ p {
     margin-top: -100px;
   }
 
+  .curve-reverse {
+    height: 100px;
+    clip-path: polygon(50% 0, 100% 4%, 100% 100%, 48% 95%, 0 100%, 0 4%);
+  }
+
   // Hero
 
   .hero {
