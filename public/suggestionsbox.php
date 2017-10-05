@@ -15,31 +15,47 @@
       <p>Listed below are suggestions for new functionality that might be added to the app. Please vote for the suggestions you like to see appear in future updates!</p>
     </div>
   </div>
+
   <div class="row suggestions">
     <!-- Suggestions -->
     <div class="col-md-10">
+      <video id="video" class="arrow-video" height="auto" preload="true">
+       <source type="video/mp4" src="/img/arrow-tilted.mp4">
+      </video>
       <h3>Instagram integration</h3>
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
+
     <!-- Counter -->
     <div class="col-md-2">
-      <p class="counter">877</p>
+      <div class="counter-div">
+        <p id="counter" class="counter">877</p>
+      </div>
     </div>
+
   </div>
   <div class="row suggestions">
     <!-- Suggestions -->
     <div class="col-md-10">
+      <video id="video" class="arrow-video" height="auto" preload="true">
+       <source type="video/mp4" src="/img/arrow-tilted.mp4">
+      </video>
       <h3>Comparision and competition between stables</h3>
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
     <!-- Counter -->
     <div class="col-md-2">
-      <p class="counter">522</p>
+      <div class="counter-div">
+        <p id="counter" class="counter">877</p>
+      </div>
     </div>
   </div>
   <div class="row suggestions">
     <!-- Suggestions -->
     <div class="col-md-10">
+      <video id="video" class="arrow-video" height="auto" preload="true">
+       <source type="video/mp4" src="/img/arrow-tilted.mp4">
+      </video>
       <h3>Encourage your friends training</h3>
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
@@ -51,6 +67,9 @@
   <div class="row suggestions">
     <!-- Suggestions -->
     <div class="col-md-10">
+      <video id="video" class="arrow-video" height="auto" preload="true">
+       <source type="video/mp4" src="/img/arrow-tilted.mp4">
+      </video>
       <h3>Training achievements</h3>
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
@@ -69,5 +88,17 @@
     </div>
   </div>
 </div>
+
+<script>
+'use strict';
+// From suggestion box
+let button = document.getElementById('counter');
+let video = document.getElementById('video');
+// Plays video on suggestion box
+button.addEventListener('click',function(){
+  video.play();
+},false);
+
+</script>
 
 <?php require(__DIR__.'/partials/footer.php'); ?>
