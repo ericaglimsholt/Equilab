@@ -20,7 +20,7 @@
 <div class="hero-module"></div>
 
 <!-- Curve -->
-<div class="curve"></div>
+<div class="curve hero"></div>
   <!-- Selling points -->
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
@@ -36,7 +36,7 @@
   <div class="container selling-points-module"></div>
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/meadow_riding2.jpg" alt="Equilab is for every horserider">
+    <img src="/img/meadow_riding2.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
   <div class="curve"></div>
