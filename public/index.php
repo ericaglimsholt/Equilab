@@ -1,10 +1,13 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
 
 <!-- Hero -->
-<div class="hero">
+<script id="template-hero-module" type="text/x-handlebars-template">
   <!-- Hero image -->
   <img class="danny" src="/img/danny-1920x1080.jpg" alt="">
   <!-- Social media links -->
+  <div class="title-hero">
+    <h1>{{ title }}</h1>
+  </div>
   <div class="social-media-holder">
     <a href="#">
       <img class="social" src="/img/download_apple.png" alt="">
@@ -13,9 +16,11 @@
       <img class="social" src="/img/download_google.png" alt="">
     </a>
   </div>
-</div>
+</script>
+<div class="hero-module"></div>
+
 <!-- Curve -->
-<div class="curve"></div>
+<div class="curve hero"></div>
   <!-- Selling points -->
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
@@ -31,7 +36,7 @@
   <div class="container selling-points-module"></div>
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/meadow_riding2.jpg" alt="Equilab is for every horserider">
+    <img src="/img/meadow_riding2.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
   <div class="curve"></div>
