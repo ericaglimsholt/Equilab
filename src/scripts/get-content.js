@@ -64,7 +64,6 @@ function fetchMenu () {
         languages: languagesArray,
         pageLink: pageLinks[i]
       };
-      console.log(data);
       menuItemsArray.push(data);
       i++;
     });
