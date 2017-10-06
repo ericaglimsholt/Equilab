@@ -86,7 +86,7 @@ p {
 
   // Hero
 
-  .hero {
+  .hero-module {
     position: relative;
     overflow: hidden;
     max-height: 800px;
@@ -94,6 +94,14 @@ p {
     .danny {
       width: 100%;
       position: absolute;
+    }
+    .title-hero {
+      position: absolute;
+      width: 40%;
+      bottom: 0;
+      margin-bottom: 15%;
+      margin-left: 15%;
+      color: white;
     }
     .social-media-holder{
       margin-top: 3em;
@@ -273,34 +281,34 @@ p {
 .hero-image {
   width: 100%;
 }
-.hero-module {
-  // background-image: url('/img/danny_cropped.jpg');
-  // height: 100vh;
-  background-size: cover;
-  .hero-row {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    height: 100%;
-    margin-left: 2em;
-    margin-right: 2em;
-    h1 {
-      color: white;
-      margin-bottom: 1.4em;
-    }
-    .app-links {
-      a {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        img {
-        width: 60%;
-        margin-bottom: .3em;
-        }
-      }
-    }
-  }
-}
+// .hero-module {
+//   background-image: url('/img/danny_cropped.jpg');
+//   height: 100vh;
+//   background-size: cover;
+//   .hero-row {
+//     display: flex;
+//     align-items: center;
+//     position: absolute;
+//     height: 100%;
+//     margin-left: 2em;
+//     margin-right: 2em;
+//     h1 {
+//       color: white;
+//       margin-bottom: 1.4em;
+//     }
+//     .app-links {
+//       a {
+//         display: flex;
+//         flex-direction: column;
+//         align-items: center;
+//         img {
+//         width: 60%;
+//         margin-bottom: .3em;
+//         }
+//       }
+//     }
+//   }
+// }
 
 // Selling point
 .selling-points-module {

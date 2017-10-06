@@ -1,10 +1,13 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
 
 <!-- Hero -->
-<div class="hero">
+<script id="template-hero-module" type="text/x-handlebars-template">
   <!-- Hero image -->
   <img class="danny" src="/img/danny-1920x1080.jpg" alt="">
   <!-- Social media links -->
+  <div class="title-hero">
+    <h1>{{ title }}</h1>
+  </div>
   <div class="social-media-holder">
     <a href="#">
       <img class="social" src="/img/download_apple.png" alt="">
@@ -13,7 +16,9 @@
       <img class="social" src="/img/download_google.png" alt="">
     </a>
   </div>
-</div>
+</script>
+<div class="hero-module"></div>
+
 <!-- Curve -->
 <div class="curve"></div>
   <!-- Selling points -->
