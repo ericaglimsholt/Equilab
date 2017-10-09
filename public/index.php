@@ -22,8 +22,6 @@
 <!-- Curve -->
 <div class="curve hero"></div>
   <!-- Selling points -->
-
-  <div class="row title"><h2>Our app</h2></div>
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
 
@@ -41,11 +39,11 @@
   <!-- Image seperator -->
   <div class="image-seperator horse">
     <img src="/img/mid-horse.png" alt="Equilab is for every horserider">
+    <img class="mobile" src="/img/midhorse-mobile-01.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
   <div class="curve"></div>
   <!-- Quotes -->
-  <div class="row title"><h2>Expert reviews</h2></div>
   <script id="template-quotes-module" type="text/x-handlebars-template">
     <div class="row quotes">
       {{#each quotes}}
@@ -59,7 +57,6 @@
   </script>
   <div class="container quotes-module"></div>
   <!-- Image seperator -->
-  <div class="row title"><h2>Take your riding to the next level!</h2></div>
   <div class="image-seperator wireframes">
     <img src="/img/mockup-a.png" alt="Equilab is for every horserider">
     <img src="/img/mockup-b.png" alt="Equilab is for every horserider">

@@ -153,6 +153,9 @@ p {
      img {
        width: 100%;
      }
+     .mobile {
+       display: none;
+     }
   }
 
   // Description
@@ -425,6 +428,81 @@ p {
   }
 
 }
+
+
+@media only screen and (max-width: 500px) {
+  .hero-module {
+    background-image: url('/../img/danny-750x1080.jpg');
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .danny {
+      display: none;
+    }
+    .title-hero {
+      color: white;
+      margin-left: 2em;
+      h1 {
+        font-size: 40px;
+        line-height: 40pt;
+      }
+    }
+    .social-media-holder {
+      margin-left: 2em;
+      .social {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
+  .selling-point {
+    img {
+      width: 40%;
+      margin-bottom: 2em;
+    }
+  }
+
+  .horse {
+    img {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .wireframes {
+    display: inline-flex;
+    margin-bottom: 4em;
+    img {
+      width: 40%;
+      height: 40%;
+      margin-left: 1.5em;
+    }
+  }
+
+  .description {
+    h2 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+
+}
+
 
 @import 'styles/faq';
 @import 'styles/hiring';
