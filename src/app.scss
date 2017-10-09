@@ -80,7 +80,7 @@ p {
   }
 
   .hero {
-    margin-top: -150px !important;
+    margin-top: -100px !important;
   }
 
   .curve-reverse {
@@ -352,6 +352,10 @@ p {
     text-align: center;
     img {
       width: 60%;
+      margin-bottom: 2em;
+    }
+    p {
+      text-align: left;
     }
   }
 }
