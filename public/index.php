@@ -22,8 +22,13 @@
 <!-- Curve -->
 <div class="curve hero"></div>
   <!-- Selling points -->
+
+  <div class="row title">
+    <h2>Our app</h2>
+  </div>
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
+
       {{#each sellingPoints}}
       <div class="col-md-4 selling-point">
         <img src="{{ icon }}" alt="">

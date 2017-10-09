@@ -185,6 +185,12 @@ p {
     margin: 0 auto !important;
   }
 
+  .title {
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
   // Footer
 
 
@@ -342,7 +348,7 @@ p {
     margin-top: 1em;
     text-align: center;
     img {
-      width: 100%;
+      width: 60%;
     }
   }
 }
