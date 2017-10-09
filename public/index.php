@@ -27,7 +27,7 @@
 
       {{#each sellingPoints}}
       <div class="col-md-4 selling-point">
-        <img src="{{ icon }}" alt="">
+        <img src="{{ icon }}" alt="{{ title }}"> <!-- TODO: add specific alt field to CMS -->
         <h2>{{ title }}</h2>
         <p>{{ description }}</p>
       </div>
