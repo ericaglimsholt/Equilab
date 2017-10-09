@@ -36,7 +36,7 @@
   <div class="container selling-points-module"></div>
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/meadow_riding2.png" alt="Equilab is for every horserider">
+    <img src="/img/mid-horse.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
   <div class="curve"></div>

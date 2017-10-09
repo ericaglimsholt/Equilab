@@ -187,20 +187,40 @@ p {
 
   // Footer
 
+
   .row .logo {
     width: 200px;
     height: 100%;
     img {
-      width: 200px;
+      width: 300px;
       margin-left: 3em;
+      margin-bottom: -1em;
     }
   }
+
+  .row .info {
+    text-align: center;
+      margin-bottom: 2em;
+    p {
+      color: white;
+    }
+  }
+
   .row .social-media {
     height: 100%;
     width: 30%;
     float: right;
     img {
-      margin-right: 1.5em !important;
+      margin-right: 1.2em !important;
+    }
+    .terms {
+      position: absolute;
+      margin-top: 4em;
+      margin-right: 2em;
+      width: 9em;
+      p {
+        color: white;
+      }
     }
   }
 
@@ -390,9 +410,9 @@ p {
       justify-content: flex-end;
       height: 100%;
       img {
-        width: 80px;
+        width: 60px;
         margin: .5em;
-        margin-bottom: 2em;
+        margin-bottom: 0em;
       }
     }
   }
