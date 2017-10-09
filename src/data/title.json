@@ -1,0 +1,26 @@
+{
+  "suggestions": {
+    "en-US": {
+      "title": "Our app"
+    },
+    "sv-SV": {
+      "title": "Vår app"
+    }
+  },
+  "quotes": {
+    "en-US": {
+      "title": "Expert reviews"
+    },
+    "sv-SV": {
+      "title": "Expert utlåtande"
+    }
+  },
+  "wireframes": {
+    "en-US": {
+      "title": "Take your riding to the next level!"
+    },
+    "sv-SV": {
+      "title": "Ta ridningen till nästa nivå!"
+    }
+  }
+}

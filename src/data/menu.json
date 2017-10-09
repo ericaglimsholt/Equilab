@@ -1,0 +1,24 @@
+{
+  "objects": {
+    "en-US": {
+      "home": "Home",
+      "faq": "FAQ",
+      "suggestion-box": "Suggestionbox",
+      "hiring": "Work for us",
+      "language": {
+        "english": "English",
+        "swedish": "Swedish"
+      }
+    },
+    "sv-SV": {
+      "home": "Hem",
+      "faq": "FAQ",
+      "suggestion-box": "Förslagslåda",
+      "hiring": "Jobba med oss",
+      "language": {
+        "english": "Engelska",
+        "swedish": "Svenska"
+      }
+    }
+  }
+}

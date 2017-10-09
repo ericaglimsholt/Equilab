@@ -25,7 +25,7 @@ function mix($path)
     </button>
     <!-- Equilab logotype -->
     <a class="navbar-brand" href="/">
-      <img src="/img/Equilab_logo_v1@2x.png" alt="Equilab Icon">
+      <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
     </a>
     <script id="template-menu-module" type="text/x-handlebars-template">
       <!-- Pages -->

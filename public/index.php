@@ -24,6 +24,7 @@
   <!-- Selling points -->
   <script id="template-selling-points-module" type="text/x-handlebars-template">
     <div class="row selling-points-row">
+
       {{#each sellingPoints}}
       <div class="col-md-4 selling-point">
         <img src="{{ icon }}" alt="">
@@ -34,9 +35,11 @@
     </div>
   </script>
   <div class="container selling-points-module"></div>
+
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/meadow_riding2.png" alt="Equilab is for every horserider">
+    <img src="/img/mid-horse.png" alt="Equilab is for every horserider">
+    <img class="mobile" src="/img/midhorse-mobile-01.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
   <div class="curve"></div>

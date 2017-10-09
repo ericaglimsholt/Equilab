@@ -80,7 +80,7 @@ p {
   }
 
   .hero {
-    margin-top: -150px !important;
+    margin-top: -100px !important;
   }
 
   .curve-reverse {
@@ -153,6 +153,9 @@ p {
      img {
        width: 100%;
      }
+     .mobile {
+       display: none;
+     }
   }
 
   // Description
@@ -185,22 +188,48 @@ p {
     margin: 0 auto !important;
   }
 
+  .title {
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
   // Footer
+
 
   .row .logo {
     width: 200px;
     height: 100%;
     img {
-      width: 200px;
+      width: 300px;
       margin-left: 3em;
+      margin-bottom: -1em;
     }
   }
+
+  .row .info {
+    text-align: center;
+      margin-bottom: 2em;
+    p {
+      color: white;
+    }
+  }
+
   .row .social-media {
     height: 100%;
     width: 30%;
     float: right;
     img {
-      margin-right: 1.5em !important;
+      margin-right: 1.2em !important;
+    }
+    .terms {
+      position: absolute;
+      margin-top: 4em;
+      margin-right: 2em;
+      width: 9em;
+      p {
+        color: white;
+      }
     }
   }
 
@@ -322,7 +351,11 @@ p {
     margin-top: 1em;
     text-align: center;
     img {
-      width: 100%;
+      width: 60%;
+      margin-bottom: 2em;
+    }
+    p {
+      text-align: left;
     }
   }
 }
@@ -338,6 +371,7 @@ p {
 
 // Quotes
 .quotes-module {
+  margin-bottom: 4em;
   .quotes {
     margin-top: 1em;
     text-align: center;
@@ -390,14 +424,89 @@ p {
       justify-content: flex-end;
       height: 100%;
       img {
-        width: 80px;
+        width: 60px;
         margin: .5em;
-        margin-bottom: 2em;
+        margin-bottom: 0em;
       }
     }
   }
 
 }
+
+
+@media only screen and (max-width: 500px) {
+  .hero-module {
+    background-image: url('/../img/danny-750x1080.jpg');
+    height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .danny {
+      display: none;
+    }
+    .title-hero {
+      color: white;
+      margin-left: 2em;
+      h1 {
+        font-size: 40px;
+        line-height: 40pt;
+      }
+    }
+    .social-media-holder {
+      margin-left: 2em;
+      .social {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .title {
+    margin-top: 2em;
+    margin-bottom: 2em;
+    h2 {
+      margin: 0 auto;
+    }
+  }
+
+  .selling-point {
+    img {
+      width: 40%;
+      margin-bottom: 2em;
+    }
+  }
+
+  .horse {
+    img {
+      display: none;
+    }
+    .mobile {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  .wireframes {
+    display: inline-flex;
+    margin-bottom: 4em;
+    img {
+      width: 40%;
+      height: 40%;
+      margin-left: 1.5em;
+    }
+  }
+
+  .description {
+    h2 {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+
+
+}
+
 
 @import 'styles/faq';
 @import 'styles/hiring';
