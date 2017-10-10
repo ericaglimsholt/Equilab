@@ -19,8 +19,6 @@ Please read the 'features to be added' to see what to expect of the site.
 - [ ] Add cookie alert
 - [ ] Switch between images with picture
 
-## Licence
-
 ## License
 This project is licensed under the terms of the MIT license.
 >You'll find all about the license [here](https://github.com/marieeriksson/Equilab/blob/master/LICENSE).
