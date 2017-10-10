@@ -1,7 +1,7 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
 <!-- Hero image -->
 <div class="faq-hero-module">
-  <img src="/img/faqhorse-1920x500.jpg" alt="">
+  <img src="/img/Equilab_FAQ.jpg" alt="">
 </div>
 <!-- Curve -->
 <div class="curve"></div>

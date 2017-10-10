@@ -5,7 +5,7 @@
   <img src="/img/suggestionhorse-1920x500.jpg" alt="">
 </div>
 <!-- Curve -->
-<div class="curve"></div>
+<div class="curve sugg"></div>
 <!-- Suggestion box -->
 <div class="container suggestion-box">
   <div class="row introducation">
@@ -89,17 +89,5 @@
     </div>
   </div>
 </div>
-
-<script>
-'use strict';
-// From suggestion box
-let button = document.getElementById('counter');
-let video = document.getElementById('video');
-// Plays video on suggestion box
-button.addEventListener('click',function(){
-  video.play();
-},false);
-
-</script>
 
 <?php require(__DIR__.'/partials/footer.php'); ?>

@@ -5,11 +5,18 @@ $textColorLight: #808080;
 
 body {
   background: white;
-
 }
 .container-width {
   min-height: 100vh;
 }
+
+// .header-curve  {
+//   height: 100vh !important;
+//   background-color: blue !important;
+//   -webkit-clip-path: ellipse(180% 70% at 50% 70%) !important;
+//   clip-path: ellipse(180% 70% at 50% 70%) !important;
+//   margin-top: -10px !important;
+// }
 
 h1 {
   font-family: 'Avenir', sans-serif;
@@ -45,6 +52,8 @@ p {
 .navbar {
   font-family: 'Avenir', sans-serif;
 }
+
+
 
 @media only screen and (min-width: 760px) {
   // Meny
@@ -106,8 +115,8 @@ p {
     .title-hero {
       position: absolute;
       width: 40%;
-      bottom: 0;
-      margin-bottom: 15%;
+      top: 0;
+      margin-top: 5%;
       margin-left: 15%;
       color: white;
     }
@@ -147,7 +156,9 @@ p {
     display: flex;
     justify-content: center;
     img {
-      margin: 4em;
+      margin: 3em;
+      width: 15%;
+      height: 15%;
     }
   }
 
@@ -252,6 +263,7 @@ p {
       outline: 0em;
     }
   }
+
   .navbar-brand {
     padding: 0.5em;
     color: white;
@@ -367,7 +379,7 @@ p {
     margin-top: 1em;
     text-align: center;
     img {
-      width: 60%;
+      width: 45%;
       margin-bottom: 2em;
     }
     p {
@@ -531,10 +543,10 @@ p {
 
   .wireframes {
     display: inline-flex;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     img {
-      width: 40%;
-      height: 40%;
+      width: 15% !important;
+      height: 15% !important;
       margin-left: 1.5em;
     }
   }

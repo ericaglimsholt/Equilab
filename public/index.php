@@ -38,7 +38,7 @@
 
   <!-- Image seperator -->
   <div class="image-seperator horse">
-    <img src="/img/mid-horse.png" alt="Equilab is for every horserider">
+    <img src="/img/Equilab_midpage-topcurve.jpg" alt="Equilab is for every horserider">
     <img class="mobile" src="/img/midhorse-mobile-01.png" alt="Equilab is for every horserider">
   </div>
   <!-- Curve -->
