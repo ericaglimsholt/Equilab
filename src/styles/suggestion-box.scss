@@ -13,25 +13,8 @@
     h3 {
       font-weight: bold;
       margin-left: 2em;
-      // &:before {
-      //   content:url('/img/arrow.png');
-      //   padding-right: .5em;
-      // }
     }
   }
-
-  .counter-div {
-    width: 6em;
-    &:hover {
-      background-color: $primaryColorOrange;
-      color: white;
-    }
-  }
-
-  // .counter-before button:active, button:visited {
-  //   background-color: $primaryColorOrange;
-  //   display: none;
-  // }
 
   .counter-before {
     &:after {
@@ -41,6 +24,7 @@
     &:active, &:visited, &:focus{
       background-color: $primaryColorOrange;
       outline: none;
+
       &:after {
         content: '878';
         padding-right: .5em;
@@ -56,16 +40,17 @@
     font-weight: bold;
     cursor: pointer;
     background-color: white;
+    .heart-icon{
+      width: 20%;
+      padding-bottom: 2px;
+    }
     &:hover, &:active, &:visited, &:focus {
      color: white;
      background-color: $primaryColorOrange;
+     .heart-icon {
+       filter: brightness(0) invert(1);
+     }
     }
-
-    &:before {
-      content:url('/img/heart3.png');
-      padding-right: .5em;
-    }
-
   }
   .forms {
     .text {
