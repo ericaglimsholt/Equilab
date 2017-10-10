@@ -24,8 +24,8 @@ if (!localStorage.getItem('lang')) {
 
 // fetch api data based on current page
 function getCurrentPage () {
-  fetchMenu();
   let currentPageUrl = location.pathname.substring(1);
+  // fetchMenu();
 
   if (currentPageUrl === '') {
     fetchLandingPage();
@@ -50,6 +50,7 @@ function fetchMenu () {
     // temp array, add to cms api
     const pageLinks = ['/', '/faq.php', '/suggestionsbox.php', '/hiring.php', '#'];
     let i = 0;
+    let activePage = true;
     menu.menu_items.forEach(function (item) {
       const languagesArray = [];
       menu.languages.forEach(function (language) {
@@ -62,7 +63,8 @@ function fetchMenu () {
       const data = {
         menuItem: item.menu_item,
         languages: languagesArray,
-        pageLink: pageLinks[i]
+        pageLink: pageLinks[i],
+        active: activePage
       };
       menuItemsArray.push(data);
       i++;
@@ -113,6 +115,7 @@ function fetchLandingPage () {
     const quotesData = {quotes: dataArray};
     putContentInDOM(quotesData, 'quotes');
   });
+
   getContentFromApi('description', activeLanguage, (dataResponse) => {
     const description = dataResponse.metadata;
     const descriptionData = {
