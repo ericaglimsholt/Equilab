@@ -471,8 +471,16 @@ p {
   }
 }
 @media only screen and (max-width: 500px) {
+  .curve {
+    height: 100px;
+    background-color: white;
+    clip-path: ellipse(100% 70% at 50% 70%);
+    margin-top: -20px;
+  }
+
   .hero-module {
-    background-image: url('/../img/fabian-750x1334.jpg');
+    background-image: url('/../img/fabian-325x667.png');
+    background-size: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -491,6 +499,7 @@ p {
     }
     .social-media-holder {
       margin-left: 2em;
+      margin-bottom: 6em;
       .social {
         margin-bottom: 1em;
         width: 60%;
@@ -520,6 +529,7 @@ p {
     .mobile {
       display: block;
       width: 100%;
+      margin-top: 3em;
     }
   }
 
@@ -527,7 +537,7 @@ p {
     display: inline-flex;
     margin-bottom: 3em;
     img {
-      width: 15% !important;
+      width: 41% !important;
       height: 15% !important;
       margin-left: 1.5em;
     }
@@ -537,6 +547,32 @@ p {
     h2 {
       margin-left: 0;
       margin-right: 0;
+    }
+  }
+
+  .footer {
+    .social-media {
+      justify-content: flex-start;
+      margin-bottom: 1.3em;
+      flex-direction: column-reverse;
+      img {
+        width: 30px;
+      }
+    }
+    .info {
+      p {
+        color: white;
+        font-style: 11px;
+        line-height: 16px;
+        text-align: center;
+        margin-left: 5em;
+      }
+    }
+    .logo {
+      img {
+        width: 14em;
+        margin-left: 5em;
+      }
     }
   }
 
