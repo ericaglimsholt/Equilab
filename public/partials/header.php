@@ -17,6 +17,7 @@ function mix($path)
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
+<div class="content-wrap">
 
 <!-- Navbar -->
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">

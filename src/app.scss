@@ -6,7 +6,10 @@ $textColorLight: #808080;
 body {
   background: white;
   width: 100vw;
-  overflow: hidden !important;
+}
+.content-wrap {
+  width: 100%;
+  overflow: hidden;
 }
 .container-width {
   min-height: 100vh;
