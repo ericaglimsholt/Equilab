@@ -276,18 +276,24 @@ p {
     background-color: white;
     .nav-item {
       .nav-link {
+        font-weight: 300;
         padding: 0;
         text-align: center;
         margin-right: 1em;
         margin-left: 1em;
       }
       .dropdown-menu {
+        right: 0;
+        left: auto;
         border-radius: 0;
         border: 0;
         margin: 0;
         padding: .1rem 0;
-        padding-left: 1.2em;
+        padding-left: 0.5em;
+        min-width: auto !important;
         li {
+          text-align: right !important;
+          margin: 1em 1.2em;
           cursor: pointer;
         }
       }
