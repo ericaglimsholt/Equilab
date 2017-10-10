@@ -3,7 +3,7 @@
 <!-- Hero -->
 <script id="template-hero-module" type="text/x-handlebars-template">
   <!-- Hero image -->
-  <img class="danny" src="/img/danny-1920x1080.jpg" alt="">
+  <img class="danny" src="/img/fabian-1920x1080.jpg" alt="">
   <!-- Social media links -->
   <div class="title-hero">
     <h1>{{ title }}</h1>

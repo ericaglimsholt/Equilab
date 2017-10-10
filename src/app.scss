@@ -5,6 +5,10 @@ $textColorLight: #808080;
 
 body {
   background: white;
+
+}
+.container-width {
+  min-height: 100vh;
 }
 
 h1 {
@@ -174,6 +178,7 @@ p {
       .app-links {
         display: flex;
         margin: 0 auto;
+        width: 60%;
         a {
           img {
             width: 90%;
@@ -436,7 +441,7 @@ p {
 
 @media only screen and (max-width: 500px) {
   .hero-module {
-    background-image: url('/../img/danny-750x1080.jpg');
+    background-image: url('/../img/fabian-750x1334.jpg');
     height: 100vh;
 
     display: flex;
@@ -458,6 +463,7 @@ p {
       margin-left: 2em;
       .social {
         margin-bottom: 1em;
+        width: 60%;
       }
     }
   }

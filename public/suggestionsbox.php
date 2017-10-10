@@ -28,7 +28,9 @@
 
     <!-- Counter -->
     <div class="col-md-2 counter">
-      <button class="counter-before" id="counter" type="button" name="counter"></button>
+      <button class="counter-before" id="counter" type="button" name="counter">
+        <img class="heart-icon" src="/img/heart.png" alt="">
+      </button>
     </div>
 
   </div>
@@ -43,7 +45,8 @@
     </div>
     <!-- Counter -->
     <div class="col-md-2 counter">
-      <button id="counter" type="button" name="counter">800</button>
+      <button id="counter" type="button" name="counter">
+        <img class="heart-icon" src="/img/heart.png" alt=""> 800</button>
     </div>
   </div>
   <div class="row suggestions">
@@ -57,7 +60,8 @@
     </div>
     <!-- Counter -->
     <div class="col-md-2 counter">
-      <button id="counter" type="button" name="counter">249</button>
+      <button id="counter" type="button" name="counter">
+        <img class="heart-icon" src="/img/heart.png" alt=""> 249</button>
     </div>
   </div>
   <div class="row suggestions">
@@ -71,7 +75,8 @@
     </div>
     <!-- Counter -->
     <div class="col-md-2 counter">
-      <button id="counter" type="button" name="counter">113</button>
+      <button id="counter" type="button" name="counter">
+        <img class="heart-icon" src="/img/heart.png" alt=""> 113</button>
     </div>
   </div>
   <div class="row forms">
