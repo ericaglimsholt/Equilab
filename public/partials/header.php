@@ -23,18 +23,20 @@ function mix($path)
 </head>
 <body>
 
-<!-- Navbar -->
-  <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">
-    <!-- Button when on mobile device -->
-    <img src="">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Equilab logotype -->
-    <a class="navbar-brand" href="/">
-      <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
-    </a>
+  <div class="container-width">
 
+  <!-- Navbar -->
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">
+      <!-- Button when on mobile device -->
+      <img src="">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <!-- Equilab logotype -->
+      <a class="navbar-brand" href="/">
+        <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
+      </a>
+      
     <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active" data-page="">
