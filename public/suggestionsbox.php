@@ -5,7 +5,7 @@
   <img src="/img/suggestionhorse-1920x500.jpg" alt="">
 </div>
 <!-- Curve -->
-<div class="curve"></div>
+<div class="curve sugg"></div>
 <!-- Suggestion box -->
 <div class="container suggestion-box">
   <div class="row introducation">
