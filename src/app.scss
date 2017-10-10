@@ -5,11 +5,18 @@ $textColorLight: #808080;
 
 body {
   background: white;
-
 }
 .container-width {
   min-height: 100vh;
 }
+
+// .header-curve  {
+//   height: 100vh !important;
+//   background-color: blue !important;
+//   -webkit-clip-path: ellipse(180% 70% at 50% 70%) !important;
+//   clip-path: ellipse(180% 70% at 50% 70%) !important;
+//   margin-top: -10px !important;
+// }
 
 h1 {
   font-family: 'Avenir', sans-serif;
@@ -45,6 +52,8 @@ p {
 .navbar {
   font-family: 'Avenir', sans-serif;
 }
+
+
 
 @media only screen and (min-width: 760px) {
   // Meny
@@ -254,6 +263,7 @@ p {
       outline: 0em;
     }
   }
+
   .navbar-brand {
     padding: 0.5em;
     color: white;

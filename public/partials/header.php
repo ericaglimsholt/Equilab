@@ -58,7 +58,7 @@ function mix($path)
       </ul>
     </script>
     <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
-
 </nav>
+<!-- <div class="curve header-curve"></div> -->
 
 <div class="container-width">
