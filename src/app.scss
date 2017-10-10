@@ -7,12 +7,10 @@ body {
   background: white;
   width: 100vw;
 }
-.content-wrap {
-  width: 100%;
-  overflow: hidden;
-}
 .container-width {
   min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
 }
 
 // .header-curve  {
@@ -61,42 +59,6 @@ p {
 
 
 @media only screen and (min-width: 760px) {
-  // Meny
-  .bg-faded .navbar-nav {
-    background-color: $primaryColorOrange !important;
-  }
-
-  .navbar .menu-icon {
-    position: relative !important;
-  }
-
-  .nav-link {
-    border-bottom: 0 !important;
-    text-align: left !important;
-    .dropdown-menu {
-      padding-left: 1.2em !important;
-    }
-  }
-  .bg-faded .navbar-nav .nav-link, .navbar-light .navbar-nav .active>.nav-link {
-    color: white;
-
-  }
-  .navbar-light .navbar-nav .active {
-    // border-bottom: 1px solid white;
-  }
-
-  .dropdown-menu {
-    background-color: $primaryColorOrange;
-    padding-left: 1.2em;
-  }
-
-  .curve {
-    height: 100px;
-    background-color: white;
-    clip-path: ellipse(70% 70% at 50% 70%);
-    margin-top: -100px;
-  }
-
   .hero {
     margin-top: -100px !important;
   }
@@ -254,7 +216,7 @@ p {
     }
   }
 
-}
+} // end min-width 760px
 
 // Menu
 .navbar {
@@ -262,7 +224,7 @@ p {
   padding-left: 10px;
   button {
     border: none;
-    padding-top: 0.4em;
+    padding-top: 0.8em;
     filter: invert(100%) contrast(100%);
     &:focus {
       outline: 0em;
@@ -303,7 +265,7 @@ p {
   background-color: $primaryColorOrange;
   z-index: 2;
   .navbar-nav {
-    background-color: white;
+    background-color: $primaryColorOrange;
     .nav-item {
       .nav-link {
         font-weight: 300;
@@ -311,8 +273,10 @@ p {
         text-align: center;
         margin-right: 1em;
         margin-left: 1em;
+        color: #fff;
       }
       .dropdown-menu {
+        background-color: $primaryColorOrange;
         right: 0;
         left: auto;
         border-radius: 0;
@@ -333,7 +297,6 @@ p {
         border-bottom: 1px solid #fff !important;
       }
     }
-
   }
 }
 
@@ -477,19 +440,22 @@ p {
     }
   }
 }
-
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 997px) {
   .bg-faded {
+
     .navbar-nav {
+      background-color: #fff;
       .nav-item {
         .nav-link {
-            padding: 1em;
-            border-bottom: 1px solid $primaryColorLightGrey;
-            margin: 0;
+          padding: 1em;
+          border-bottom: 1px solid $primaryColorLightGrey;
+          margin: 0;
+          color: grey;
         }
         .dropdown-menu {
           width: 100%;
           padding: 0;
+          background-color: #fff;
           li {
             text-align: center !important;
             padding: 1em 0;
@@ -499,11 +465,20 @@ p {
       }
       .active {
         .nav-link {
+          color: #000;
           border-bottom: 1px solid $primaryColorLightGrey !important;
         }
       }
     }
   }
+  .navbar-mobile {
+    position: absolute;
+    top: 65px;
+    z-index: -2;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 500px) {
   .hero-module {
     background-image: url('/../img/fabian-750x1334.jpg');
     height: 100vh;
