@@ -451,6 +451,31 @@ p {
 
 
 @media only screen and (max-width: 500px) {
+  .bg-faded {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+            padding: 1em;
+            border-bottom: 1px solid $primaryColorLightGrey;
+            margin: 0;
+        }
+        .dropdown-menu {
+          width: 100%;
+          padding: 0;
+          li {
+            text-align: center !important;
+            padding: 1em 0;
+            margin: 0;
+          }
+        }
+      }
+      .active {
+        .nav-link {
+          border-bottom: 1px solid $primaryColorLightGrey !important;
+        }
+      }
+    }
+  }
   .hero-module {
     background-image: url('/../img/fabian-750x1334.jpg');
     height: 100vh;
