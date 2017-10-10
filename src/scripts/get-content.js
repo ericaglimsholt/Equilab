@@ -28,6 +28,13 @@ function fetchMenu () {
     putContentInDOM(menu, 'menu');
   })
   .then(function () {
+    const menu = document.querySelectorAll('.nav-item');
+    menu.forEach(item => {
+      item.classList.remove('active');
+      if (location.pathname.substring(1) === item.dataset.page) {
+        item.classList.add('active');
+      }
+    })
     const allLanguages = document.querySelectorAll('.lang-item');
     allLanguages.forEach(function (language) {
       language.addEventListener('click', function () {
@@ -43,7 +50,7 @@ fetchMenu();
 
 // fetch api data based on current page
 function getCurrentPage () {
-  let currentPageUrl = location.pathname.substring(1);
+  const currentPageUrl = location.pathname.substring(1);
   if (currentPageUrl === '') {
     fetchLandingPage();
   }

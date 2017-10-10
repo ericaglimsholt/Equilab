@@ -31,23 +31,18 @@ function mix($path)
 
     <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
-        <!-- Input 'Landingpage' title from API here -->
-        <li class="nav-item active ">
+        <li class="nav-item active" data-page="">
           <a class="nav-link" href="/">{{ home }} <span class="sr-only">(current)</span></a>
         </li>
-        <!-- Input 'FAQ' title from API here -->
-        <li class="nav-item">
+        <li class="nav-item" data-page="faq.php">
           <a class="nav-link" href="/faq.php">{{ faq }}</a>
         </li>
-        <!-- Input 'Suggestions' title from API here -->
-        <li class="nav-item">
+        <li class="nav-item" data-page="suggestionsbox.php">
           <a class="nav-link" href="/suggestionsbox.php">{{ suggestion-box }}</a>
         </li>
-        <!-- Input 'Hiring' title from API here -->
-        <li class="nav-item">
+        <li class="nav-item" data-page="hiring.php">
           <a class="nav-link" href="/hiring.php"> {{ hiring }}</a>
         </li>
-        <!-- Input 'Language' title from API here -->
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
           <ul class="dropdown-menu">
