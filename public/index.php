@@ -1,5 +1,7 @@
 <?php require(__DIR__.'/partials/header.php'); ?>
 
+
+
 <!-- Hero -->
 <script id="template-hero-module" type="text/x-handlebars-template">
   <!-- Hero image -->

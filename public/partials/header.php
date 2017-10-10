@@ -15,6 +15,11 @@ function mix($path)
   <title>Equilab</title>
   <link rel="stylesheet" type="text/css" href="<?php echo mix('/assets/app.css'); ?>">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Will inform Google about the English version from the Swedish version -->
+  <link rel=”alternate” hreflang=”en” href=”http://equilab.dev/en” />
+  <link rel=”alternate” hreflang=”sv” href=”http://equilab.dev/sv” />
+
 </head>
 <body>
 
@@ -47,8 +52,8 @@ function mix($path)
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
           <ul class="dropdown-menu">
-            <li class="lang-item nav-link" data-locale="en-US" href="#">{{ languages.english }}</li>
-            <li class="lang-item nav-link" data-locale="sv-SE" href="#">{{ languages.swedish }}</li>
+            <li class="lang-item nav-link" data-locale="en-US" href="#" id="enLang"  onclick="onClickReplaceEN()">{{ languages.english }}</li>
+            <li class="lang-item nav-link" data-locale="sv-SE" href="#" id="svLang" onclick="onClickReplaceSV()">{{ languages.swedish }}</li>
           </ul>
         </li>
       </ul>
@@ -58,3 +63,44 @@ function mix($path)
 <!-- <div class="curve header-curve"></div> -->
 
 <div class="container-width">
+
+  Result: <span id="result"></span>
+
+  <script>
+  let url = 'http://equilab.dev/';
+
+  function addReplaceLangCode(url, langCode) {
+    let a = document.createElement('a');
+    a.href = url; // or document.location.href;
+
+    let paths = a.pathname.split('/');
+    paths.shift();
+
+    if(paths[0].length == 2) {
+      paths[0] = langCode;
+    }else{
+      paths.unshift(langCode);
+    }
+    return a.protocol + '//' +
+      a.host + '/' + paths.join('/') +
+      (a.search != '' ?  a.search : '') +
+      (a.hash != '' ?  a.hash : '');
+  }
+
+  let result = document.getElementById('result');
+  // let enLang = document.getElementById('enLang');
+  // let svLang = document.getElementById('svLang');
+  // console.log(enLang);
+
+  // enLang.addEventListener('click',function(){
+  //   result.innerHTML = addReplaceLangCode( document.location.href, 'en');
+  // },false);
+
+  function onClickReplaceEN() {
+    result.innerHTML = addReplaceLangCode( document.location.href, 'en');
+  }
+
+  function onClickReplaceSV() {
+    document.getElementById('result').innerHTML = addReplaceLangCode( document.location.href, 'sv');
+  }
+  </script>
