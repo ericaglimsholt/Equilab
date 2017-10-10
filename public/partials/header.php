@@ -20,7 +20,6 @@ function mix($path)
 <!-- Navbar -->
   <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-default sticky-top">
     <!-- Button when on mobile device -->
-
     <img src="">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -29,26 +28,35 @@ function mix($path)
     <a class="navbar-brand" href="/">
       <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
     </a>
+
     <script id="template-menu-module" type="text/x-handlebars-template">
-      <!-- Pages -->
       <ul class="navbar-nav ml-auto">
-        {{#each menuItems}}
-          {{#if @last}}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ menuItem }}</a>
-            <ul class="dropdown-menu">
-              {{#each languages}}
-              <li class="lang-item nav-link" data-locale="{{ locale }}" href="#">{{ language }}</li>
-              {{/each}}
-            </ul>
-          </li>
-          {{else}}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ pageLink }}">{{ menuItem }}</a>
-          </li>
-          {{/if}}
-        {{/each}}
+        <!-- Input 'Landingpage' title from API here -->
+        <li class="nav-item active ">
+          <a class="nav-link" href="/">{{ home }} <span class="sr-only">(current)</span></a>
+        </li>
+        <!-- Input 'FAQ' title from API here -->
+        <li class="nav-item">
+          <a class="nav-link" href="/faq.php">{{ faq }}</a>
+        </li>
+        <!-- Input 'Suggestions' title from API here -->
+        <li class="nav-item">
+          <a class="nav-link" href="/suggestionsbox.php">{{ suggestion-box }}</a>
+        </li>
+        <!-- Input 'Hiring' title from API here -->
+        <li class="nav-item">
+          <a class="nav-link" href="/hiring.php"> {{ hiring }}</a>
+        </li>
+        <!-- Input 'Language' title from API here -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
+          <ul class="dropdown-menu">
+            <li class="lang-item nav-link" data-locale="en-US" href="#">{{ languages.english }}</li>
+            <li class="lang-item nav-link" data-locale="sv-SE" href="#">{{ languages.swedish }}</li>
+          </ul>
+        </li>
       </ul>
     </script>
-  <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
+    <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
+
 </nav>

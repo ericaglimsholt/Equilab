@@ -2,31 +2,48 @@
 import Request from './request';
 import Handlebars from 'handlebars';
 import Faq from './faq';
+import ActiveLanguage from './activeLanguage';
 
-// let DOMloaded = false;
-//
-// console.log(location.pathname);
-//
-// document.addEventListener('DOMContentLoaded', function (event) {
-//   DOMloaded = true;
-//   // if (apiData) {
-//   //   putContentInDOM(apiData);
-//   // }
-// });
+let activeLanguage = ActiveLanguage;
 
-let activeLanguage;
-// check if language is set in local storage
-if (!localStorage.getItem('lang')) {
-  activeLanguage = 'en-US';
-} else {
-  activeLanguage = localStorage.getItem('lang');
+function fetchMenu () {
+  fetch('/data/menu.json')
+  .then(function (response) {
+    // Error handlebars when error 400 appears
+    if (response.status >= 400) {
+      var err = {
+        'message': 'There was an error with this request.'
+      };
+      return callback(err, false);
+    }
+    return response.json();
+  })
+  .then(function (json) {
+    let menu;
+    if (activeLanguage === 'sv-SE') {
+      menu = json.languages.sv;
+    } else {
+      menu = json.languages.en;
+    }
+    putContentInDOM(menu, 'menu');
+  })
+  .then(function () {
+    const allLanguages = document.querySelectorAll('.lang-item');
+    allLanguages.forEach(function (language) {
+      language.addEventListener('click', function () {
+        activeLanguage = language.dataset.locale;
+        localStorage.setItem('lang', activeLanguage);
+        getCurrentPage(activeLanguage);
+        fetchMenu();
+      });
+    });
+  });
 }
+fetchMenu();
 
 // fetch api data based on current page
 function getCurrentPage () {
-  fetchMenu();
   let currentPageUrl = location.pathname.substring(1);
-
   if (currentPageUrl === '') {
     fetchLandingPage();
   }
@@ -41,37 +58,6 @@ function getCurrentPage () {
   }
 }
 getCurrentPage();
-
-// Fetch menu
-function fetchMenu () {
-  getContentFromApi('menu', activeLanguage, (dataResponse) => {
-    const menu = dataResponse.metadata;
-    const menuItemsArray = [];
-    // temp array, add to cms api
-    const pageLinks = ['/', '/faq.php', '/suggestionsbox.php', '/hiring.php', '#'];
-    let i = 0;
-    menu.menu_items.forEach(function (item) {
-      const languagesArray = [];
-      menu.languages.forEach(function (language) {
-        const languagesData = {
-          language: language.language,
-          locale: language.locale
-        };
-        languagesArray.push(languagesData);
-      });
-      const data = {
-        menuItem: item.menu_item,
-        languages: languagesArray,
-        pageLink: pageLinks[i]
-      };
-      menuItemsArray.push(data);
-      i++;
-    });
-    const menuData = { menuItems: menuItemsArray };
-    putContentInDOM(menuData, 'menu');
-    listenForLanguageChange();
-  });
-}
 
 // Fetch landingpage
 function fetchLandingPage () {
@@ -113,6 +99,7 @@ function fetchLandingPage () {
     const quotesData = {quotes: dataArray};
     putContentInDOM(quotesData, 'quotes');
   });
+
   getContentFromApi('description', activeLanguage, (dataResponse) => {
     const description = dataResponse.metadata;
     const descriptionData = {
@@ -209,6 +196,7 @@ function getContentFromApi (moduleObj, language, onDone) {
   });
 }
 
+// put api content in dom using Handlebars templating
 function putContentInDOM (data, moduleObj) {
   const templateElement = document.getElementById('template-' + moduleObj + '-module');
   const moduleElement = document.body.querySelector('.' + moduleObj + '-module');
@@ -220,18 +208,6 @@ function putContentInDOM (data, moduleObj) {
   }
 }
 
-// handle language switch
-function listenForLanguageChange () {
-  const allLanguages = document.querySelectorAll('.lang-item');
-
-  allLanguages.forEach(function (language) {
-    language.addEventListener('click', function () {
-      activeLanguage = language.dataset.locale;
-      localStorage.setItem('lang', activeLanguage);
-      getCurrentPage(activeLanguage);
-    });
-  });
-}
 // make first letter of string uppercase
 function ucFirst (string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
