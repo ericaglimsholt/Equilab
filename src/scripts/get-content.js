@@ -9,9 +9,8 @@ let activeLanguage = ActiveLanguage;
 function fetchMenu () {
   fetch('/data/menu.json')
   .then(function (response) {
-    // Error handlebars when error 400 appears
-    if (response.status >= 400) {
-      var err = {
+    if (!response.ok) {
+      const err = {
         'message': 'There was an error with this request.'
       };
       return callback(err, false);
@@ -23,30 +22,37 @@ function fetchMenu () {
     if (activeLanguage === 'sv-SE') {
       menu = json.languages.sv;
     } else {
+      // english as fallback/default
       menu = json.languages.en;
     }
     putContentInDOM(menu, 'menu');
   })
   .then(function () {
-    const menu = document.querySelectorAll('.nav-item');
-    menu.forEach(item => {
-      item.classList.remove('active');
-      if (location.pathname.substring(1) === item.dataset.page) {
-        item.classList.add('active');
-      }
-    })
-    const allLanguages = document.querySelectorAll('.lang-item');
-    allLanguages.forEach(function (language) {
-      language.addEventListener('click', function () {
-        activeLanguage = language.dataset.locale;
-        localStorage.setItem('lang', activeLanguage);
-        getCurrentPage(activeLanguage);
-        fetchMenu();
-      });
-    });
+    addActiveClassAndEventListnerToMenu();
   });
 }
 fetchMenu();
+
+function addActiveClassAndEventListnerToMenu () {
+  // set active class to nav links when nav is completly loaded
+  const menu = document.querySelectorAll('.nav-item');
+  menu.forEach(item => {
+    item.classList.remove('active');
+    if (location.pathname.substring(1) === item.dataset.page) {
+      item.classList.add('active');
+    }
+  })
+  // add eventlistner to language links when nav is completly loaded
+  const allLanguages = document.querySelectorAll('.lang-item');
+  allLanguages.forEach(function (language) {
+    language.addEventListener('click', function () {
+      activeLanguage = language.dataset.locale;
+      localStorage.setItem('lang', activeLanguage);
+      getCurrentPage(activeLanguage);
+      fetchMenu();
+    });
+  });
+}
 
 // fetch api data based on current page
 function getCurrentPage () {
@@ -66,7 +72,7 @@ function getCurrentPage () {
 }
 getCurrentPage();
 
-// Fetch landingpage
+// Get landingpage content from Cosmic API
 function fetchLandingPage () {
   getContentFromApi('hero', activeLanguage, (dataResponse) => {
     const heroData = {
@@ -75,7 +81,6 @@ function fetchLandingPage () {
     putContentInDOM(heroData, 'hero');
   });
 
-// Get content from selling points in API
   getContentFromApi('selling-points', activeLanguage, (dataResponse) => {
     const sellingPoints = dataResponse.metadata.selling_points;
     const dataArray = [];
@@ -91,7 +96,6 @@ function fetchLandingPage () {
     putContentInDOM(sellingPointsData, 'selling-points');
   });
 
-// Get content from qoutes in API
   getContentFromApi('quotes', activeLanguage, (dataResponse) => {
     const quotes = dataResponse.metadata.get_quotes;
     const dataArray = [];
@@ -117,7 +121,7 @@ function fetchLandingPage () {
   });
 }
 
-// Get content from hiring in API
+// Get hiring page content from Cosmic API
 function fetchHiringPage () {
   getContentFromApi('hirings', activeLanguage, (dataResponse) => {
     const hirings = dataResponse.metadata;
@@ -155,7 +159,7 @@ function fetchHiringPage () {
   });
 }
 
-// Get content from faq in API
+// Get FAQ content from Cosmic API
 function fetchFaqPage () {
   getContentFromApi('faq', activeLanguage, (dataResponse) => {
     const questions = dataResponse.metadata.questions;
@@ -187,14 +191,15 @@ function fetchFaqPage () {
 }
 
 function fetchSuggestionboxPage () {
+  // not yet implemented
 }
 
-function getContentFromApi (moduleObj, language, onDone) {
+function getContentFromApi (element, language, onDone) {
   const apiConfig = {
     bucket: { slug: 'equilab', read_key: 'tB0fiR44Yh7ZUUct6iqu3Do9PGSEy1gdUlX4xMWIAwb6sE6Dfx' }
   };
   const params = {
-    slug: moduleObj,
+    slug: element,
     locale: language
   };
   Request.getObject(apiConfig, params, (error, response) => {
@@ -204,13 +209,13 @@ function getContentFromApi (moduleObj, language, onDone) {
 }
 
 // put api content in dom using Handlebars templating
-function putContentInDOM (data, moduleObj) {
-  const templateElement = document.getElementById('template-' + moduleObj + '-module');
-  const moduleElement = document.body.querySelector('.' + moduleObj + '-module');
+function putContentInDOM (data, element) {
+  const templateElement = document.getElementById('template-' + element + '-module');
+  const moduleElement = document.body.querySelector('.' + element + '-module');
   const source = templateElement.innerHTML;
   const template = Handlebars.compile(source);
   moduleElement.innerHTML = template(data); // +=
-  if (moduleObj === 'faq') {
+  if (element === 'faq') {
     Faq.sortFaqByCategory();
   }
 }

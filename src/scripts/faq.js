@@ -1,17 +1,16 @@
 'use strict';
 
 module.exports = {
-  // Sorting
   sortFaqByCategory: function () {
     const questions = document.querySelectorAll('.question');
     const categories = document.querySelectorAll('.category');
 
     if (questions.length > 0) {
       questions.forEach(question => {
-        // Set default choosen category
-        categories.forEach(cat => {
-          if (cat.dataset.category === 'basics') {
-            cat.classList.add('active-cat-heading');
+        // Set default displayed category
+        categories.forEach(category => {
+          if (category.dataset.category === 'basics') {
+            category.classList.add('active-cat-heading');
           }
         });
         if (question.classList.contains('basics')) {
@@ -20,26 +19,25 @@ module.exports = {
         question.querySelector('h3').addEventListener('click', showAnswer);
       });
     }
-    categories.forEach(catItem => catItem.addEventListener('click', filterFaq));
+    categories.forEach(category => category.addEventListener('click', filterFaq));
 
-    // Filter
+    // Filter faq by clicked category
     function filterFaq (event) {
-      categories.forEach(catItem => catItem.classList.remove('active-cat-heading'));
-      event.target.classList.add('active-cat-heading');
-      const clickedCat = event.target.dataset.category;
+      categories.forEach(category => category.classList.remove('active-cat-heading'));
+      const clickedCategory = event.target;
+      clickedCategory.classList.add('active-cat-heading');
       questions.forEach(question => {
         question.classList.remove('active-cat');
-        if (question.classList.contains(clickedCat.toLowerCase())) {
+        if (question.classList.contains(clickedCategory.dataset.category.toLowerCase())) {
           question.classList.add('active-cat');
         }
       });
     }
     function showAnswer (event) {
       const question = event.target;
-      question.classList.toggle('active-question');
       const answer = event.target.parentElement.querySelector('p');
+      question.classList.toggle('active-question');
       answer.classList.toggle('active-answer');
     }
   }
-
 };
