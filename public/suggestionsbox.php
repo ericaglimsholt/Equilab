@@ -27,10 +27,8 @@
     </div>
 
     <!-- Counter -->
-    <div class="col-md-2">
-      <div class="counter-div">
-        <p id="counter" class="counter">877</p>
-      </div>
+    <div class="col-md-2 counter">
+      <button class="counter-before" id="counter" type="button" name="counter"></button>
     </div>
 
   </div>
@@ -44,10 +42,8 @@
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
     <!-- Counter -->
-    <div class="col-md-2">
-      <div class="counter-div">
-        <p id="counter" class="counter">877</p>
-      </div>
+    <div class="col-md-2 counter">
+      <button id="counter" type="button" name="counter">800</button>
     </div>
   </div>
   <div class="row suggestions">
@@ -60,8 +56,8 @@
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
     <!-- Counter -->
-    <div class="col-md-2">
-      <p class="counter">249</p>
+    <div class="col-md-2 counter">
+      <button id="counter" type="button" name="counter">249</button>
     </div>
   </div>
   <div class="row suggestions">
@@ -74,8 +70,8 @@
       <p>Directly after you have stopped exercising you press stopp training, add some extra informationen if you want that. Then all you need to do is press save activity which will make the app save and process the information.</p>
     </div>
     <!-- Counter -->
-    <div class="col-md-2">
-      <p class="counter">113</p>
+    <div class="col-md-2 counter">
+      <button id="counter" type="button" name="counter">113</button>
     </div>
   </div>
   <div class="row forms">

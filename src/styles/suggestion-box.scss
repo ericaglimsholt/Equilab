@@ -28,21 +28,45 @@
       color: white;
     }
   }
-  .counter {
+
+  // .counter-before button:active, button:visited {
+  //   background-color: $primaryColorOrange;
+  //   display: none;
+  // }
+
+  .counter-before {
+    &:after {
+      content: '877';
+      padding-right: .5em;
+    }
+    &:active, &:visited, &:focus{
+      background-color: $primaryColorOrange;
+      outline: none;
+      &:after {
+        content: '878';
+        padding-right: .5em;
+      }
+    }
+  }
+
+  .counter button {
     border: 2px solid $primaryColorOrange;
     width: 6em;
     text-align: center;
     color: $primaryColorOrange;
     font-weight: bold;
     cursor: pointer;
-    &:visited {
+    background-color: white;
+    &:hover, &:active, &:visited, &:focus {
      color: white;
      background-color: $primaryColorOrange;
     }
+
     &:before {
-      content:url('/img/icon-heart4.png');
+      content:url('/img/heart3.png');
       padding-right: .5em;
     }
+
   }
   .forms {
     .text {
