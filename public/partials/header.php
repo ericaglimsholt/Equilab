@@ -15,6 +15,11 @@ function mix($path)
   <title>Equilab</title>
   <link rel="stylesheet" type="text/css" href="<?php echo mix('/assets/app.css'); ?>">
   <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
+
+  <!-- Will inform Google about the English version from the Swedish version -->
+  <link rel=”alternate” hreflang=”en” href=”http://equilab.dev/en” />
+  <link rel=”alternate” hreflang=”sv” href=”http://equilab.dev/sv” />
+
 </head>
 <body>
 
@@ -31,30 +36,73 @@ function mix($path)
       <a class="navbar-brand" href="/">
         <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
       </a>
+      
+    <script id="template-menu-module" type="text/x-handlebars-template">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active" data-page="">
+          <a class="nav-link" href="/">{{ home }} <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item" data-page="faq.php">
+          <a class="nav-link" href="/faq.php">{{ faq }}</a>
+        </li>
+        <li class="nav-item" data-page="suggestionsbox.php">
+          <a class="nav-link" href="/suggestionsbox.php">{{ suggestion-box }}</a>
+        </li>
+        <li class="nav-item" data-page="hiring.php">
+          <a class="nav-link" href="/hiring.php"> {{ hiring }}</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
+          <ul class="dropdown-menu">
+            <li class="lang-item nav-link" data-locale="en-US" href="#" id="enLang"  onclick="onClickReplaceEN()">{{ languages.english }}</li>
+            <li class="lang-item nav-link" data-locale="sv-SE" href="#" id="svLang" onclick="onClickReplaceSV()">{{ languages.swedish }}</li>
+          </ul>
+        </li>
+      </ul>
+    </script>
+    <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
+</nav>
+<!-- <div class="curve header-curve"></div> -->
 
-      <script id="template-menu-module" type="text/x-handlebars-template">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active" data-page="">
-            <a class="nav-link" href="/">{{ home }} <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item" data-page="faq.php">
-            <a class="nav-link" href="/faq.php">{{ faq }}</a>
-          </li>
-          <li class="nav-item" data-page="suggestionsbox.php">
-            <a class="nav-link" href="/suggestionsbox.php">{{ suggestion-box }}</a>
-          </li>
-          <li class="nav-item" data-page="hiring.php">
-            <a class="nav-link" href="/hiring.php"> {{ hiring }}</a>
-          </li>
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
-            <ul class="dropdown-menu">
-              <li class="lang-item nav-link" data-locale="en-US" href="#">{{ languages.english }}</li>
-              <li class="lang-item nav-link" data-locale="sv-SE" href="#">{{ languages.swedish }}</li>
-            </ul>
-          </li>
-        </ul>
-      </script>
-      <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
-  </nav>
-  <!-- <div class="curve header-curve"></div> -->
+<div class="container-width">
+
+  Result: <span id="result"></span>
+
+  <script>
+  let url = 'http://equilab.dev/';
+
+  function addReplaceLangCode(url, langCode) {
+    let a = document.createElement('a');
+    a.href = url; // or document.location.href;
+
+    let paths = a.pathname.split('/');
+    paths.shift();
+
+    if(paths[0].length == 2) {
+      paths[0] = langCode;
+    }else{
+      paths.unshift(langCode);
+    }
+    return a.protocol + '//' +
+      a.host + '/' + paths.join('/') +
+      (a.search != '' ?  a.search : '') +
+      (a.hash != '' ?  a.hash : '');
+  }
+
+  let result = document.getElementById('result');
+  // let enLang = document.getElementById('enLang');
+  // let svLang = document.getElementById('svLang');
+  // console.log(enLang);
+
+  // enLang.addEventListener('click',function(){
+  //   result.innerHTML = addReplaceLangCode( document.location.href, 'en');
+  // },false);
+
+  function onClickReplaceEN() {
+    result.innerHTML = addReplaceLangCode( document.location.href, 'en');
+  }
+
+  function onClickReplaceSV() {
+    document.getElementById('result').innerHTML = addReplaceLangCode( document.location.href, 'sv');
+  }
+  </script>

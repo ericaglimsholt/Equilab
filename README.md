@@ -14,8 +14,11 @@ Please read the 'features to be added' to see what to expect of the site.
 
 ## Features to be added
 - [ ] Stample map
-- [ ] The possibility to logg in as a user
+- [ ] The possibility to login as a user
 - [ ] Connection with the app
+- [ ] Have the suggestion box connected through the API
+- [ ] Add cookies/cookies alert
+- [ ] Switch between images with picture
 
 ## Licence
 MIT License
