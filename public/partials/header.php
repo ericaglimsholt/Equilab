@@ -36,7 +36,7 @@ function mix($path)
       <a class="navbar-brand" href="/">
         <img src="/img/Equilab_logo_v2_white.png" alt="Equilab Icon">
       </a>
-      
+
     <script id="template-menu-module" type="text/x-handlebars-template">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item active" data-page="">
@@ -64,7 +64,6 @@ function mix($path)
 </nav>
 <!-- <div class="curve header-curve"></div> -->
 
-<div class="container-width">
 
   Result: <span id="result"></span>
 
