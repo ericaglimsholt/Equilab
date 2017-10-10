@@ -92,6 +92,10 @@ function fetchLandingPage () {
       };
       dataArray.push(data);
     });
+    // Bug in cosmic cms? english selling points in wrong order.
+    if (activeLanguage === "en-US") {
+      dataArray.reverse();
+    }
     const sellingPointsData = {sellingPoints: dataArray};
     putContentInDOM(sellingPointsData, 'selling-points');
   });
