@@ -14,6 +14,7 @@ function mix($path)
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <title>Equilab</title>
   <link rel="stylesheet" type="text/css" href="<?php echo mix('/assets/app.css'); ?>">
+  <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
 
