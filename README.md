@@ -18,6 +18,8 @@ Please read the 'features to be added' to see what to expect of the site.
 - [ ] Have the suggestion box connected through the API
 - [ ] Add cookie alert
 - [ ] Switch between images with picture
+- [ ] Add current language to url
+- [ ] Curved navbar
 
 ## License
 This project is licensed under the terms of the MIT license.
