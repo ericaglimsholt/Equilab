@@ -1,21 +1,23 @@
 {
-  "objects": {
-    "en-US": {
+  "languages": {
+    "en": {
       "home": "Home",
       "faq": "FAQ",
       "suggestion-box": "Suggestionbox",
       "hiring": "Work for us",
-      "language": {
+      "language": "Language",
+      "languages": {
         "english": "English",
         "swedish": "Swedish"
       }
     },
-    "sv-SV": {
+    "sv": {
       "home": "Hem",
       "faq": "FAQ",
       "suggestion-box": "Förslagslåda",
       "hiring": "Jobba med oss",
-      "language": {
+      "language": "Språk",
+      "languages": {
         "english": "Engelska",
         "swedish": "Svenska"
       }
