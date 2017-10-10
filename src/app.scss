@@ -147,7 +147,9 @@ p {
     display: flex;
     justify-content: center;
     img {
-      margin: 4em;
+      margin: 3em;
+      width: 15%;
+      height: 15%;
     }
   }
 
@@ -495,10 +497,10 @@ p {
 
   .wireframes {
     display: inline-flex;
-    margin-bottom: 4em;
+    margin-bottom: 3em;
     img {
-      width: 40%;
-      height: 40%;
+      width: 15% !important;
+      height: 15% !important;
       margin-left: 1.5em;
     }
   }
