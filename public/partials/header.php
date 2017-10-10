@@ -52,3 +52,5 @@ function mix($path)
     </script>
   <div class="menu-module collapse navbar-collapse navbar-mobile" id="navbarSupportedContent"></div>
 </nav>
+
+<div class="container-width">
