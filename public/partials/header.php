@@ -54,8 +54,8 @@ function mix($path)
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">{{ language }}</a>
           <ul class="dropdown-menu">
-            <li class="lang-item nav-link" data-locale="en-US" href="#" id="enLang"  onclick="onClickReplaceEN()">{{ languages.english }}</li>
-            <li class="lang-item nav-link" data-locale="sv-SE" href="#" id="svLang" onclick="onClickReplaceSV()">{{ languages.swedish }}</li>
+            <li class="lang-item nav-link" data-locale="en-US" href="#">{{ languages.english }}</li>
+            <li class="lang-item nav-link" data-locale="sv-SE" href="#">{{ languages.swedish }}</li>
           </ul>
         </li>
       </ul>

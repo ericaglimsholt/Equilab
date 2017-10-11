@@ -18,11 +18,11 @@
           <a href="https://www.instagram.com/equilabapp/">
             <img src="/img/icon_instragram.png" alt="Equilab Instagram">
           </a>
-          <div class="terms">
-            <p>Terms & services</p>
-          </div>
-
         </div>
+        <div class="terms">
+          <p>Terms & services</p>
+        </div>
+
       </div>
     </div>
 

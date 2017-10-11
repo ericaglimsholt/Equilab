@@ -317,34 +317,6 @@ p {
 .hero-image {
   width: 100%;
 }
-// .hero-module {
-//   background-image: url('/img/danny_cropped.jpg');
-//   height: 100vh;
-//   background-size: cover;
-//   .hero-row {
-//     display: flex;
-//     align-items: center;
-//     position: absolute;
-//     height: 100%;
-//     margin-left: 2em;
-//     margin-right: 2em;
-//     h1 {
-//       color: white;
-//       margin-bottom: 1.4em;
-//     }
-//     .app-links {
-//       a {
-//         display: flex;
-//         flex-direction: column;
-//         align-items: center;
-//         img {
-//         width: 60%;
-//         margin-bottom: .3em;
-//         }
-//       }
-//     }
-//   }
-// }
 
 // Selling point
 .selling-points-module {
@@ -420,6 +392,9 @@ p {
     display: flex;
     align-items: baseline;
     width: 100%;
+    .info {
+      margin: 0;
+    }
     .social-media {
       display: flex;
       align-items: center;
@@ -429,6 +404,15 @@ p {
         width: 60px;
         margin: .5em;
         margin-bottom: 0em;
+      }
+    }
+    .terms {
+      width: 100%;
+      text-align: right;
+      margin: 0 2em;
+      p {
+        color: #fff;
+
       }
     }
   }
@@ -551,12 +535,33 @@ p {
   }
 
   .footer {
-    .social-media {
-      justify-content: flex-start;
-      margin-bottom: 1.3em;
-      flex-direction: column-reverse;
-      img {
-        width: 30px;
+    clip-path: ellipse(105% 105% at 50% 105%);
+    min-height: 250px;
+    margin-top: 5em;
+    .container {
+      padding-top: 2em;
+      .row {
+        width: auto;
+        p {
+          margin: 0.5em 0;
+          line-height: 1.4;
+          color: #fff;
+        }
+        .social-media {
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          margin-bottom: 1.3em;
+          flex-direction: row;
+          img {
+            width: 30px;
+          }
+        }
+        .terms {
+          width: 100%;
+          text-align: center;
+        }
       }
     }
     .info {
